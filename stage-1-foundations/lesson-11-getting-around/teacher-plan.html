@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 11 — Getting Around: Transport & Directions — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t active" href="teacher-plan.html">Teacher plan</a>
+<a class="s" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge teacher">👨‍🏫 For the teacher</div>
+<h1 id="lesson-11--getting-around-transport--directions">Lesson 11 —
+Getting Around: Transport &amp; Directions</h1>
+<h2 id="how-to-teach-this">How to teach this</h2>
+<p>This lesson is practical survival English for moving around a new
+city: catching a bus or train, buying a ticket, and following directions
+on the street. It also gives a gentle taste of the kind of listening the
+student will meet in the IELTS General Training test, where a short
+announcement gives a time, a number, and a place all at once.</p>
+<p>Remember the working method for this student: <strong>the student
+listens and writes; the student does not speak.</strong> You read every
+script and example aloud. The student's job is to recognize words on the
+page, listen carefully while you read, and write the answers. There is
+no speaking task anywhere in this lesson, and there is no pronunciation
+work.</p>
+<p>Keep your voice clear and steady, especially for the listening
+exercise. Read each announcement at a calm, natural pace. You may read
+each one <strong>twice</strong> the first time through, then once more
+at the end as a check. Pause between sentences so the student has time
+to write. Give light Portuguese glosses only when the student looks
+stuck — the aim is for the student to start catching meaning from the
+English itself.</p>
+<h2 id="objective">Objective</h2>
+<p>By the end of the lesson the student can:</p>
+<ul>
+<li>Recognize and write the core transport vocabulary (bus, train,
+station, ticket, platform, and so on).</li>
+<li>Catch a <strong>time</strong>, a <strong>platform or bus
+number</strong>, and a <strong>destination</strong> from a short spoken
+announcement and write them into a grid.</li>
+<li>Read a short set of directions and find the correct destination,
+answering questions in writing.</li>
+<li>Write four to five simple sentences giving directions from one place
+to another.</li>
+</ul>
+<h2 id="target-language">Target language</h2>
+<p><strong>Transport</strong></p>
+<ul>
+<li>bus — <em>ônibus (BR) / autocarro (PT)</em></li>
+<li>train — <em>trem (BR) / comboio (PT)</em></li>
+<li>station — <em>estação</em></li>
+<li>stop (bus stop) — <em>parada / paragem</em></li>
+<li>ticket — <em>bilhete / passagem</em></li>
+<li>single / return — <em>só ida / ida e volta</em></li>
+<li>platform — <em>plataforma / linha</em></li>
+<li>timetable (schedule) — <em>horário</em></li>
+<li>on foot — <em>a pé</em></li>
+<li>get on / get off — <em>subir (entrar) / descer (sair)</em></li>
+</ul>
+<p><strong>Directions</strong></p>
+<ul>
+<li>turn left / turn right — <em>virar à esquerda / à direita</em></li>
+<li>go straight — <em>siga em frente</em></li>
+<li>next to — <em>ao lado de</em></li>
+<li>on the corner — <em>na esquina</em></li>
+<li>opposite — <em>em frente a / do lado oposto</em></li>
+<li>traffic light — <em>semáforo</em></li>
+</ul>
+<p><strong>Recycle:</strong> prepositions of place — in, on, at, near,
+behind, between, in front of.</p>
+<h2 id="read-aloud-scripts">Read-aloud scripts</h2>
+<p>Read these aloud for the <strong>Listen &amp; Write</strong> exercise
+(Practice b). Read slowly and clearly. Read each announcement twice,
+pausing between sentences. The information the student must catch is in
+<strong>bold</strong> for your eyes only — do not stress it unnaturally,
+just say it clearly.</p>
+<p><strong>Worked example (do this one together, write the answers on
+the sheet so the student sees the model):</strong></p>
+<blockquote>
+<p>"Good morning. The bus to <strong>Riverside</strong> leaves at
+<strong>nine fifteen</strong> from stop <strong>number four</strong>.
+Please have your ticket ready."</p>
+</blockquote>
+<p>(Answers for the example row: Time = 9:15 · Stop/Platform = 4 ·
+Destination = Riverside)</p>
+<p><strong>Announcement 1:</strong></p>
+<blockquote>
+<p>"Attention, please. The train to <strong>Hill Park</strong> will
+leave at <strong>ten thirty</strong> from platform <strong>two</strong>.
+Mind the gap when you get on."</p>
+</blockquote>
+<p><strong>Announcement 2:</strong></p>
+<blockquote>
+<p>"The bus to the <strong>City Hospital</strong> departs at
+<strong>eight forty-five</strong> from stop <strong>number
+seven</strong>. This is a single journey. Thank you."</p>
+</blockquote>
+<p><strong>Announcement 3:</strong></p>
+<blockquote>
+<p>"Good afternoon. The next train to <strong>Green Market</strong>
+leaves at <strong>twelve o'clock</strong> from platform
+<strong>five</strong>. Please keep your ticket until the end of your
+trip."</p>
+</blockquote>
+<p><strong>Announcement 4 (a little longer, for the IELTS-style
+check):</strong></p>
+<blockquote>
+<p>"Attention. The bus to the <strong>Airport</strong> is now boarding
+at stop <strong>number one</strong>. It leaves at <strong>one
+twenty</strong>. The return ticket is cheaper than two single tickets.
+Have a good journey."</p>
+</blockquote>
+<p><strong>Answer key for the grid:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Time</th>
+<th>Platform / Stop</th>
+<th>Destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example</td>
+<td>9:15</td>
+<td>Stop 4</td>
+<td>Riverside</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10:30</td>
+<td>Platform 2</td>
+<td>Hill Park</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8:45</td>
+<td>Stop 7</td>
+<td>City Hospital</td>
+</tr>
+<tr>
+<td>3</td>
+<td>12:00</td>
+<td>Platform 5</td>
+<td>Green Market</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1:20</td>
+<td>Stop 1</td>
+<td>Airport</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flow-with-timings-4550-min">Flow with timings (~45–50 min)</h2>
+<p><strong>Warm-up (~5 min).</strong> Point to the Key language box on
+the student sheet. Read each transport word aloud once while the student
+follows with a finger and reads silently. Ask the student to
+<strong>write</strong> three words from the box that they already knew.
+No speaking — just reading and writing.</p>
+<p><strong>Present (~10 min).</strong> Read the Key language glosses
+aloud. Then read the four directions phrases (turn left, turn right, go
+straight, opposite) and draw a tiny arrow next to each on the sheet or
+on paper so the student links the word to a picture. Recycle
+prepositions of place by reading two example sentences aloud: <em>"The
+station is next to the bank."</em> / <em>"The bus stop is on the
+corner."</em></p>
+<p><strong>Practice (~20 min).</strong></p>
+<ul>
+<li>(a) <strong>Match</strong> transport words to meanings. Do the
+example together, then the student writes the matches.</li>
+<li>(b) <strong>Listen &amp; Write.</strong> Read the worked-example
+announcement and fill the example row together so the model is clear.
+Then read Announcements 1–4 (twice each). The student writes the time,
+platform/stop number, and destination into the grid. Read all four once
+more as a check.</li>
+<li>(c) <strong>Read &amp; find.</strong> The student reads the short
+directions text, marks the destination on the simple described map, and
+answers the questions in writing.</li>
+</ul>
+<p><strong>Produce — student WRITES (~8 min).</strong> The student
+writes four to five sentences giving directions from the station to the
+library, using the sentence starters and word bank. The student writes
+only; you do not ask the student to read the sentences aloud.</p>
+<p><strong>Wrap-up (~5 min).</strong> Read the completed grid answers
+aloud so the student can check listening answers against your reading.
+Read the homework instructions aloud and confirm the student understands
+what to write.</p>
+<h2 id="common-mistakes--gentle-corrections">Common mistakes &amp;
+gentle corrections</h2>
+<ul>
+<li><strong>"get on / get off" mixed up.</strong> The student may write
+<em>"get off the bus"</em> meaning to board. Gently show: you
+<strong>get on</strong> to enter, you <strong>get off</strong> to leave.
+A small up-arrow and down-arrow on the sheet helps.</li>
+<li><strong>"single / return" confusion.</strong> A <em>single</em>
+ticket is one way only; a <em>return</em> is there and back. If the
+student writes <em>"two ticket"</em> for a round trip, point to
+<em>return</em> as the shorter, correct option.</li>
+<li><strong>Preposition slips with directions.</strong> Expect
+<em>"opposite to the bank"</em> or <em>"next the shop."</em> The natural
+forms are <em>opposite the bank</em> (no "to") and <em>next
+<strong>to</strong> the shop</em>. Correct gently by underlining the
+small word.</li>
+<li><strong>Catching numbers in listening.</strong> If the student
+writes "9:50" for "nine fifteen," do not say it is wrong straight away —
+read that one sentence again slowly and let the student fix it. Catching
+numbers improves with calm repetition.</li>
+<li><strong>"go straight" written as "go direct."</strong> Show that the
+fixed phrase is <em>go straight</em> (or <em>go straight on /
+ahead</em>).</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<ol type="1">
+<li>On the student sheet, finish the error-correction exercise (four
+sentences) and the directions-writing task if not completed in
+class.</li>
+<li>Write a short note (three to four sentences) telling a friend how to
+get from the station to a supermarket, using <em>turn left/right</em>,
+<em>go straight</em>, and <em>on the corner</em>.</li>
+<li>Listen to <code>ielts/accent-listening.md</code> and write down any
+three transport or direction words you hear in it.</li>
+</ol>
+
+<div class="nav-footer"><a href="../lesson-10-past-simple-irregular/student-sheet.html">← Lesson 10 — Past Simple Irregular</a><a href="student-sheet.html">Lesson 11 — Getting Around →</a></div>
+</div></div>
+</div>
+</body>
+</html>

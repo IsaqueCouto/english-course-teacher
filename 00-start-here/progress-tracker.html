@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress Tracker / Meu Progresso — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="placement-check.html">Placement Check</a>
+<a class="" href="curriculum-map.html">Curriculum Map</a>
+<a class="active" href="progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../stage-1-foundations/lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../stage-1-foundations/lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../stage-1-foundations/lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../stage-1-foundations/lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../stage-1-foundations/lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../stage-1-foundations/lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../stage-1-foundations/lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../stage-1-foundations/lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../stage-1-foundations/lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../stage-1-foundations/lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../stage-1-foundations/lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../stage-1-foundations/lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../stage-1-foundations/lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../stage-1-foundations/lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../stage-1-foundations/lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+
+<h1 id="progress-tracker--meu-progresso">Progress Tracker / Meu
+Progresso</h1>
+<p>Welcome! This is your personal record of everything you can do in
+English. Each line is a real-life "can-do" win. When you can do it,
+check the box and write the date. Look back at this list every month —
+you will be amazed how far you have come!</p>
+<p>Bem-vindo(a)! Este é o seu registro pessoal de tudo o que você
+consegue fazer em inglês. Cada linha é uma conquista real do dia a dia.
+Quando conseguir fazer algo, marque a caixinha e escreva a data. Releia
+esta lista todo mês — você vai se surpreender com o quanto avançou!</p>
+<p><strong>How to use it / Como usar:</strong></p>
+<ul>
+<li>Review monthly. / Revise uma vez por mês.</li>
+<li>Check off <code>- [ ]</code> and write the date when you achieve
+each goal. / Marque a caixinha e escreva a data ao conquistar cada
+meta.</li>
+<li>Celebrate every win, big or small! / Comemore cada vitória, grande
+ou pequena!</li>
+</ul>
+<blockquote>
+<p>Note: Speaking is coached by your teacher during lessons. This
+tracker focuses on your overall real-life abilities (listening, reading,
+writing, and practical communication). / Observação: A fala é treinada
+com a professora/o professor nas aulas. Este registro acompanha suas
+habilidades gerais da vida real (escuta, leitura, escrita e comunicação
+prática).</p>
+</blockquote>
+<hr />
+<h2 id="my-start--meu-início">My Start / Meu Início</h2>
+<ul>
+<li><strong>Placement check result / Resultado do nivelamento:</strong>
+____________________</li>
+<li><strong>Start date / Data de início:</strong>
+____________________</li>
+<li><strong>My goal / Meu objetivo:</strong> Learn English and take the
+IELTS General Training test (~Nov 2026). / Aprender inglês e fazer a
+prova IELTS General Training (~Nov 2026).</li>
+</ul>
+<hr />
+<h2 id="stage-1--everyday-basics--básico-do-dia-a-dia">Stage 1 —
+Everyday Basics / Básico do Dia a Dia</h2>
+<p>Simple sentences and real-life needs. / Frases simples e necessidades
+reais.</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />I can understand and write simple
+sentences about my daily routine. / Consigo entender e escrever frases
+simples sobre minha rotina diária. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can read simple signs and labels.
+/ Consigo ler placas e etiquetas simples. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can fill in a basic form. /
+Consigo preencher um formulário básico. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can understand simple questions. /
+Consigo entender perguntas simples. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can ask for things I need (a life
+ability). / Consigo pedir o que preciso (uma habilidade da vida real). —
+Date: ________</label></li>
+<li><label><input type="checkbox" />I can understand prices and pay for
+things. / Consigo entender preços e pagar por coisas. — Date:
+________</label></li>
+<li><label><input type="checkbox" />I can write a short, simple message
+or note. / Consigo escrever uma mensagem ou um bilhete curto e simples.
+— Date: ________</label></li>
+<li><label><input type="checkbox" />I can understand simple directions
+(left, right, near, far). / Consigo entender direções simples (esquerda,
+direita, perto, longe). — Date: ________</label></li>
+</ul>
+<hr />
+<h2 id="stage-2--building-confidence--ganhando-confiança">Stage 2 —
+Building Confidence / Ganhando Confiança</h2>
+<p>Short texts, paragraphs, and opinions. / Textos curtos, parágrafos e
+opiniões.</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />I can read a short text and
+understand the main idea. / Consigo ler um texto curto e entender a
+ideia principal. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can write a short paragraph. /
+Consigo escrever um parágrafo curto. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can understand and give simple
+opinions. / Consigo entender e dar opiniões simples. — Date:
+________</label></li>
+<li><label><input type="checkbox" />I can understand a short
+conversation or recording. / Consigo entender uma conversa ou gravação
+curta. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can write a simple email. /
+Consigo escrever um e-mail simples. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can understand everyday workplace
+instructions. / Consigo entender instruções comuns do ambiente de
+trabalho. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can connect my ideas with words
+like "and", "but", and "because". / Consigo conectar minhas ideias com
+palavras como "and", "but" e "because". — Date: ________</label></li>
+</ul>
+<hr />
+<h2 id="stage-3--ielts-ready--prontoa-para-o-ielts">Stage 3 — IELTS
+Ready / Pronto(a) para o IELTS</h2>
+<p>Getting ready for the IELTS General Training test. / Preparação para
+a prova IELTS General Training.</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />I understand the 4 parts of the
+IELTS test (Listening, Reading, Writing, Speaking). / Entendo as 4
+partes da prova IELTS (Escuta, Leitura, Escrita, Fala). — Date:
+________</label></li>
+<li><label><input type="checkbox" />I can complete an IELTS Listening
+section. / Consigo completar uma seção de Listening do IELTS. — Date:
+________</label></li>
+<li><label><input type="checkbox" />I can complete an IELTS General
+Training Reading section. / Consigo completar uma seção de Reading do
+IELTS General Training. — Date: ________</label></li>
+<li><label><input type="checkbox" />I can write an IELTS General
+Training letter (Task 1). / Consigo escrever uma carta do IELTS General
+Training (Tarefa 1). — Date: ________</label></li>
+<li><label><input type="checkbox" />I can write a short IELTS essay
+(Task 2). / Consigo escrever uma redação curta do IELTS (Tarefa 2). —
+Date: ________</label></li>
+<li><label><input type="checkbox" />I can manage my time during a full
+practice test. / Consigo administrar meu tempo durante um simulado
+completo. — Date: ________</label></li>
+<li><label><input type="checkbox" />I feel ready and confident to book
+my test. / Sinto-me preparado(a) e confiante para marcar minha prova. —
+Date: ________</label></li>
+</ul>
+<hr />
+<p>Every check mark is real progress. Keep going — you've got this! /
+Cada marca é um progresso real. Continue assim — você consegue!</p>
+
+<div class="nav-footer"><a href="curriculum-map.html">← Curriculum Map</a><a href="../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher) →</a></div>
+</div></div>
+</div>
+</body>
+</html>

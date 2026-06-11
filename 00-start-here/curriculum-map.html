@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Map — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="placement-check.html">Placement Check</a>
+<a class="active" href="curriculum-map.html">Curriculum Map</a>
+<a class="" href="progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../stage-1-foundations/lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../stage-1-foundations/lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../stage-1-foundations/lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../stage-1-foundations/lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../stage-1-foundations/lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../stage-1-foundations/lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../stage-1-foundations/lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../stage-1-foundations/lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../stage-1-foundations/lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../stage-1-foundations/lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../stage-1-foundations/lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../stage-1-foundations/lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../stage-1-foundations/lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../stage-1-foundations/lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../stage-1-foundations/lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+
+<h1 id="curriculum-map">Curriculum Map</h1>
+<p>This course takes a Portuguese-speaking learner who already has the
+basics (he can read and write simple sentences) up toward a realistic
+IELTS General Training test. It uses a spiral approach: grammar and
+vocabulary are introduced and then revisited at higher difficulty, with
+an IELTS "drip" beginning early so the test format feels familiar long
+before the final sprint. There are three stages. <strong>Stage 1 —
+Foundations (weeks 1-6, A1→A2)</strong> covers present/past/future
+basics, questions, daily routines, descriptions, and everyday survival
+skills (housing, transit, shopping, workplace small-talk), with the
+IELTS drip starting as light familiarization. <strong>Stage 2 — Building
+(weeks 7-12, A2→low B1)</strong> develops opinions, comparisons,
+paragraph writing, and reading for gist and detail, with real
+IELTS-format practice on each skill. <strong>Stage 3 — Test sprint
+(weeks 13-16)</strong> focuses on IELTS GT strategies, timed sections,
+full mock tests, and error review.</p>
+<h2 id="realistic-outcome">Realistic outcome</h2>
+<p>A realistic target is <strong>IELTS General Training band
+4.5-5.5</strong>, depending on study habits, exposure outside lessons,
+and how quickly reading and listening stamina build. The course is
+<strong>modular</strong>, so week ranges can flex: stages can be
+stretched or compressed, and lessons can be repeated or skipped without
+breaking the sequence.</p>
+<h2 id="how-to-read-the-table">How to read the table</h2>
+<ul>
+<li><strong>IELTS element</strong> shows which test skill a lesson
+touches, or "—" if it is purely general English.</li>
+<li>The IELTS drip begins in <strong>Stage 1</strong> (first marked at
+Lesson 5) as light, low-pressure familiarization, then ramps up in
+Stages 2 and 3.</li>
+<li><strong>The student's own speaking is coached live by the teacher,
+not via these sheets.</strong> Materials are recognition, reading,
+listening, and writing only; no sheet asks the student to produce spoken
+English or practice pronunciation. Where "Speaking" appears below, it
+marks the lesson where the teacher introduces the speaking test
+<em>format and question types</em> for live oral coaching.</li>
+</ul>
+<h2 id="master-lesson-table">Master lesson table</h2>
+<h3 id="stage-1--foundations-weeks-1-6-a1a2">Stage 1 — Foundations
+(weeks 1-6, A1→A2)</h3>
+<table>
+<thead>
+<tr>
+<th>Lesson #</th>
+<th>Title</th>
+<th>Stage</th>
+<th>Focus</th>
+<th>IELTS element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Present Simple: Daily Routines</td>
+<td>1</td>
+<td>I/you/we/they + verb; routines, time, frequency</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>He / She / It and the -s Ending</td>
+<td>1</td>
+<td>Third-person singular present simple</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Questions: Yes/No and Wh-</td>
+<td>1</td>
+<td>do/does questions; what/where/when/who/how</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>There is / There are</td>
+<td>1</td>
+<td>Describing rooms; prepositions of place</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Listening for Key Words</td>
+<td>1</td>
+<td>First IELTS Listening taste; names, numbers, times</td>
+<td>Listening (drip starts)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Present Continuous: Happening Now</td>
+<td>1</td>
+<td>am/is/are + -ing; now vs. routine</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Housing: Renting a Place</td>
+<td>1</td>
+<td>Renting vocabulary; reading a rental ad</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Reading Signs and Notices</td>
+<td>1</td>
+<td>Everyday signs; IELTS Reading Section 1 feel</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Past Simple: Regular Verbs</td>
+<td>1</td>
+<td>-ed spelling; yesterday/last week; didn't</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Past Simple: Irregular Verbs</td>
+<td>1</td>
+<td>Common irregular past forms</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Getting Around: Transport &amp; Directions</td>
+<td>1</td>
+<td>Transport, directions; listen for times/numbers</td>
+<td>Listening</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Shopping, Money, and Prices</td>
+<td>1</td>
+<td>Prices, sizes, "How much…?", receipts</td>
+<td>—</td>
+</tr>
+<tr>
+<td>13</td>
+<td>The Future: "going to" and "will"</td>
+<td>1</td>
+<td>Plans, decisions, predictions</td>
+<td>—</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Describing People and Places</td>
+<td>1</td>
+<td>Adjectives and adjective position</td>
+<td>—</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Workplace Small-Talk and Politeness</td>
+<td>1</td>
+<td>Polite requests, greetings, short messages</td>
+<td>—</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Filling In Forms (IELTS Listening Section 1)</td>
+<td>1</td>
+<td>Personal details, gap-fill listening</td>
+<td>Listening</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Short Messages and Notes</td>
+<td>1</td>
+<td>Reading short messages; first informal notes</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Stage 1 Review and Progress Check</td>
+<td>1</td>
+<td>Consolidation across all Stage 1 grammar</td>
+<td>Listening / Reading</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stage-2--building-weeks-7-12-a2low-b1">Stage 2 — Building (weeks
+7-12, A2→low B1)</h3>
+<table>
+<thead>
+<tr>
+<th>Lesson #</th>
+<th>Title</th>
+<th>Stage</th>
+<th>Focus</th>
+<th>IELTS element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19</td>
+<td>Giving Opinions and Reasons</td>
+<td>2</td>
+<td>I think / because; agree/disagree language</td>
+<td>Speaking (format intro)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Comparatives and Superlatives</td>
+<td>2</td>
+<td>bigger/biggest; better/best</td>
+<td>—</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Connectors: and, but, so, because</td>
+<td>2</td>
+<td>Linking ideas in writing</td>
+<td>Writing Task 2 (foundations)</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Writing a Paragraph</td>
+<td>2</td>
+<td>Topic sentence, support, structure</td>
+<td>Writing Task 2 (foundations)</td>
+</tr>
+<tr>
+<td>23</td>
+<td>The Informal Letter: Format (Writing Task 1)</td>
+<td>2</td>
+<td>Layout, greetings, sign-offs of GT letters</td>
+<td>Writing Task 1 (letter)</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Informal Letter: Asking and Requesting</td>
+<td>2</td>
+<td>Polite requests, giving information</td>
+<td>Writing Task 1 (letter)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Reading for Gist (Skimming)</td>
+<td>2</td>
+<td>Main idea, headings, fast first reads</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Reading for Detail (Scanning)</td>
+<td>2</td>
+<td>Finding specific facts; True/False/Not Given</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Listening: Following a Conversation</td>
+<td>2</td>
+<td>IELTS Listening Sec. 2-3; multiple choice</td>
+<td>Listening</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Present Perfect: Experience and Recent Past</td>
+<td>2</td>
+<td>have/has + past participle; for/since</td>
+<td>—</td>
+</tr>
+<tr>
+<td>29</td>
+<td>The Semi-Formal Letter</td>
+<td>2</td>
+<td>Complaints, applications, neutral tone</td>
+<td>Writing Task 1 (letter)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Describing Trends and Changes</td>
+<td>2</td>
+<td>Increase/decrease, more/less over time</td>
+<td>—</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Opinion Essay Structure (Writing Task 2)</td>
+<td>2</td>
+<td>Intro, body, conclusion; planning an essay</td>
+<td>Writing Task 2</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Reading: Matching and Headings Tasks</td>
+<td>2</td>
+<td>IELTS Reading question types</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Modals: can, should, must, have to</td>
+<td>2</td>
+<td>Ability, advice, obligation</td>
+<td>—</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Listening: Note Completion and Maps</td>
+<td>2</td>
+<td>IELTS Listening map/plan and notes tasks</td>
+<td>Listening</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Writing Task 2: Developing Ideas</td>
+<td>2</td>
+<td>Examples, explanations, paragraph depth</td>
+<td>Writing Task 2</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Speaking Part 1 and 2: Format and Cue Cards</td>
+<td>2</td>
+<td>Question types and the long-turn; live coaching</td>
+<td>Speaking (format intro)</td>
+</tr>
+<tr>
+<td>37</td>
+<td>The Formal Letter: Tone and Register</td>
+<td>2</td>
+<td>Formal greetings, fixed phrases, sign-offs</td>
+<td>Writing Task 1 (letter)</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Stage 2 Review and Mini-Assessment</td>
+<td>2</td>
+<td>Consolidation across all four skills</td>
+<td>Listening / Reading / Writing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stage-3--test-sprint-weeks-13-16">Stage 3 — Test sprint (weeks
+13-16)</h3>
+<table>
+<thead>
+<tr>
+<th>Lesson #</th>
+<th>Title</th>
+<th>Stage</th>
+<th>Focus</th>
+<th>IELTS element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>39</td>
+<td>IELTS GT Overview and Scoring</td>
+<td>3</td>
+<td>Test structure, band descriptors, time budget</td>
+<td>All sections</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Listening Strategy: All Four Sections</td>
+<td>3</td>
+<td>Predicting answers, spelling, transferring answers</td>
+<td>Listening</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Listening Timed Practice 1</td>
+<td>3</td>
+<td>Full listening test under time</td>
+<td>Listening</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Reading Strategy and Time Management</td>
+<td>3</td>
+<td>Order of attack, time per passage</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Reading Timed Practice 1</td>
+<td>3</td>
+<td>Full GT reading test under time</td>
+<td>Reading</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Writing Task 1 Strategy and Checklist</td>
+<td>3</td>
+<td>Identifying purpose, tone, bullet points</td>
+<td>Writing Task 1 (letter)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Writing Task 1 Timed Practice</td>
+<td>3</td>
+<td>One letter in 20 minutes</td>
+<td>Writing Task 1 (letter)</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Writing Task 2 Strategy and Question Types</td>
+<td>3</td>
+<td>Opinion, discussion, problem/solution prompts</td>
+<td>Writing Task 2</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Writing Task 2 Timed Practice</td>
+<td>3</td>
+<td>One essay in 40 minutes</td>
+<td>Writing Task 2</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Speaking: Parts 1-3 Full Run-Through</td>
+<td>3</td>
+<td>Live mock interview with the teacher</td>
+<td>Speaking (live coaching)</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Error Review: Writing</td>
+<td>3</td>
+<td>Reviewing letter and essay mistakes, fixes</td>
+<td>Writing Task 1 &amp; 2</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Error Review: Listening and Reading</td>
+<td>3</td>
+<td>Analyzing wrong answers, patterns</td>
+<td>Listening / Reading</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Full Mock Test 1 (Listening + Reading)</td>
+<td>3</td>
+<td>Timed, exam conditions</td>
+<td>Listening / Reading</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Full Mock Test 1 (Writing) + Review</td>
+<td>3</td>
+<td>Both tasks timed, then feedback</td>
+<td>Writing Task 1 &amp; 2</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Targeted Weak-Spot Practice</td>
+<td>3</td>
+<td>Drilling the lowest-scoring skill</td>
+<td>Varies by student</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Full Mock Test 2 (Listening + Reading)</td>
+<td>3</td>
+<td>Second timed full run</td>
+<td>Listening / Reading</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Full Mock Test 2 (Writing + Speaking) + Review</td>
+<td>3</td>
+<td>Tasks timed plus live speaking mock</td>
+<td>Writing / Speaking</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Final Review and Exam-Day Plan</td>
+<td>3</td>
+<td>Last-minute strategy, logistics, confidence</td>
+<td>All sections</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Note:</strong> Stage 1 is built in full. Stages 2-3 are
+produced in batches and titles may be refined.</p>
+
+<div class="nav-footer"><a href="placement-check.html">← Placement Check</a><a href="progress-tracker.html">Progress Tracker / Meu Progresso →</a></div>
+</div></div>
+</div>
+</body>
+</html>

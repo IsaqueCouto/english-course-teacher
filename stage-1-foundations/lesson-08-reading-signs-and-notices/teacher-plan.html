@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 8 — Reading Signs and Notices — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t active" href="teacher-plan.html">Teacher plan</a>
+<a class="s" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge teacher">👨‍🏫 For the teacher</div>
+<h1 id="lesson-8--reading-signs-and-notices">Lesson 8 — Reading Signs
+and Notices</h1>
+<h2 id="how-to-teach-this">How to teach this</h2>
+<p>This is the student's first real <em>taste</em> of the IELTS reading
+test — gentle and low-pressure. In IELTS General Training, the
+<strong>Reading</strong> test starts with what is called <strong>Section
+1 ("social survival")</strong>: short, everyday texts like notices,
+signs, advertisements, and timetables. (See
+<code>ielts/ielts-overview.md</code> for the full picture — you do not
+need to show the student all of it.) These are exactly the kinds of
+texts they will read every day after moving abroad: a shop window, a
+door, a workplace memo, a sign in a building.</p>
+<p>The skill we are building is <strong>reading for meaning,
+fast</strong> — not understanding every single word. Teach the student
+to:</p>
+<ul>
+<li><strong>Skim first.</strong> Look at the whole sign quickly. What is
+it about? A shop? A door? A machine?</li>
+<li><strong>Guess from context.</strong> If a word is new, the rest of
+the sign and the place usually give it away. "OUT OF ORDER" on a machine
+means the machine is broken — they can guess this even without knowing
+"order."</li>
+<li><strong>Not panic over unknown words.</strong> This is the single
+most important habit. In real life and in IELTS, nobody knows every
+word. Reassure the student constantly: <em>"You don't need every word.
+You need the meaning."</em></li>
+</ul>
+<p>Keep the mood light. This is a first taste, not a test. Praise good
+guessing even when the guess is wrong — the <em>strategy</em> is what we
+are training. Everything here is <strong>reading and writing
+only</strong>; the student does not speak any of it. Let them point,
+circle, match, and write their answers on the sheet.</p>
+<p>A note on a new task type: this lesson introduces <strong>True /
+False / Not Given</strong>, a classic IELTS reading question type.
+Explain it carefully (the student sheet has a simple explanation and
+example) because the "Not Given" idea is genuinely tricky and new. The
+key teaching point: <strong>Not Given</strong> means <em>the text does
+not tell us</em> — it is not the same as False. False means the text
+says the opposite.</p>
+<h2 id="objective">Objective</h2>
+<p>By the end of this lesson the student can read everyday signs and
+short notices and answer comprehension questions about them — including
+the IELTS <strong>True / False / Not Given</strong> question type. This
+is the core IELTS GT Reading Section 1 skill, met for the first time in
+a gentle, scaffolded way.</p>
+<h2 id="flow-with-timings-4550-min">Flow with timings (~45–50 min)</h2>
+<p><strong>Warm-up (5 min).</strong> Show the student a few signs they
+already half-know from everyday life — for example, write
+<strong>OPEN</strong> and <strong>CLOSED</strong> on paper. Ask them (in
+writing or by pointing) which one means a shop is working. Then connect
+it to the goal: <em>"Where you are moving, signs like these are
+everywhere — on doors, machines, walls. Today we learn to read them and
+answer questions. This is the first part of the IELTS reading
+test."</em> Light PT gloss is fine here: <em>"placas e avisos" = signs
+and notices.</em></p>
+<p><strong>Present (10 min).</strong> Introduce the idea of
+<strong>skimming</strong> and <strong>guessing from context</strong>
+(see "How to teach this"). Walk through one sign together on the board —
+for example:</p>
+<blockquote>
+<p><strong>NO PARKING</strong></p>
+</blockquote>
+<p>Ask: What is this about? (Cars.) Where would you see it? (A street, a
+driveway.) What does it tell you to do? (Do not leave your car here.)
+Model out the thinking so the student sees the strategy. Then introduce
+<strong>True / False / Not Given</strong> slowly, using the explanation
+on the student sheet. Do the example item together.</p>
+<p><strong>Practice (15 min).</strong> The student works through the
+signs and the matching task (Task A) and the "where would you see this?"
+task (Task C) on the sheet. The first item of each task is already done
+as an example. Let them work quietly in writing; you circulate and
+nudge. When they hit a new word, prompt: <em>"Don't worry about that
+word — look at the whole sign. What place is this?"</em></p>
+<p><strong>Produce (10–12 min).</strong> The student reads the longer
+notice (the laundry-room rules) and answers the four written questions
+(Task D), plus the True / False / Not Given set (Task B). This is the
+closest thing to a real IELTS Section 1 item. Let them take their time —
+no clock pressure today. The goal is comfort and accuracy, not
+speed.</p>
+<p><strong>Wrap-up (5 min).</strong> Review answers together on paper.
+Celebrate correct guesses from context. Reinforce the big idea in
+writing: <em>"You read signs and notices and found the meaning — even
+with new words. This is exactly what the IELTS reading test asks
+for."</em> Hand out homework.</p>
+<h2 id="common-mistakes--gentle-corrections">Common mistakes &amp;
+gentle corrections</h2>
+<ul>
+<li><strong>Confusing "False" and "Not Given."</strong> This is the most
+common and most natural error. Gently re-explain: <em>False</em> = the
+text says the <strong>opposite</strong>; <em>Not Given</em> = the text
+<strong>says nothing</strong> about it. Walk back through the example.
+Expect to repeat this more than once — it is normal.</li>
+<li><strong>Trying to understand every word.</strong> If the student
+freezes on one unknown word, cover it with a finger and ask them to read
+the rest. Show them the meaning is still clear. Praise the guess.</li>
+<li><strong>Reading the question before skimming the sign.</strong>
+Encourage skimming the sign first, then reading the question. (In later
+stages this order can flip for speed, but for now, meaning first.)</li>
+<li><strong>Over-thinking short signs.</strong> A sign like "STAFF ONLY"
+means just that — workers, not customers. If the student writes a long
+complicated answer, gently point back to the plain meaning.</li>
+<li><strong>Mixing up "Out of order" with "out of stock."</strong> A
+real false-friend trap. <em>Out of order</em> = broken / not working.
+<em>Out of stock</em> = none left to sell. Note it kindly if it comes
+up.</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<p>The student sheet's Homework section asks the student to:</p>
+<ol type="1">
+<li>Find or remember <strong>three signs</strong> from real life (a
+shop, a door, a machine, a notice) and <strong>write</strong> each one
+out, then write <strong>one sentence</strong> explaining what it means
+and where you would see it.</li>
+<li>Re-read the laundry-room notice on the sheet and write <strong>two
+new True / False / Not Given statements</strong> of their own about it,
+with the answers.</li>
+</ol>
+<p>Review this at the start of the next lesson. The "write your own
+statements" task is excellent diagnostic evidence of whether the True /
+False / Not Given concept has landed.</p>
+
+<div class="nav-footer"><a href="../lesson-07-housing-and-rooms/student-sheet.html">← Lesson 07 — Housing And Rooms</a><a href="student-sheet.html">Lesson 08 — Reading Signs And Notices →</a></div>
+</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 18 — Stage 1 Review and Progress Check — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t active" href="teacher-plan.html">Teacher plan</a>
+<a class="s" href="student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge teacher">👨‍🏫 For the teacher</div>
+<h1 id="lesson-18--stage-1-review-and-progress-check">Lesson 18 — Stage
+1 Review and Progress Check</h1>
+<h2 id="how-to-teach-this">How to teach this</h2>
+<p>This is the last lesson of Stage 1. It is a mixed review and a gentle
+progress check. Like every lesson, it is a reading and writing lesson —
+the student does not speak at any point. Every task is reading,
+listening while you read aloud, recognition, or writing. Do not ask the
+student to say, repeat, or read anything aloud.</p>
+<p>Treat this lesson as a friendly check, not a hard test. The goal is
+to see what the student already controls in writing and to notice the
+one or two areas that still need a little more practice before Stage 2.
+Each exercise on the student sheet opens with a solved example, so the
+student always sees the pattern before they write. Keep light Portuguese
+glosses ready to unlock meaning, but let the student write in English as
+much as possible. Reward correct written sentences and correct
+gently.</p>
+<p>Have paper and a pen ready. The student writes everything by hand.
+You read short texts aloud while the student follows on the page.</p>
+<h2 id="objective">Objective</h2>
+<p>By the end, the student can demonstrate, in writing, control of the
+core Stage 1 grammar — the present simple (including he/she/it with
+<strong>-s</strong>), questions, <strong>there is / there are</strong>,
+the present continuous, the past simple (regular and irregular), and the
+future (<strong>going to</strong> and <strong>will</strong>) — and can
+produce a short mixed-tense paragraph about themselves using present,
+past, and future together.</p>
+<h2 id="what-this-reviews">What this reviews</h2>
+<p>This lesson pulls together everything from Stage 1.</p>
+<p>Grammar:</p>
+<ul>
+<li>The present simple for routines and facts (I work, they live).</li>
+<li>He / she / it and the <strong>-s</strong> ending (she works, he
+lives).</li>
+<li>Questions (Do you...? Does she...? Where...? What...?).</li>
+<li><strong>There is / there are</strong> for saying what exists.</li>
+<li>The present continuous for actions happening now (I am
+working).</li>
+<li>The past simple, regular verbs (worked, lived, studied).</li>
+<li>The past simple, irregular verbs (went, had, saw, came).</li>
+<li>The future with <strong>going to</strong> (plans) and
+<strong>will</strong> (decisions now, predictions, offers).</li>
+</ul>
+<p>Practical and IELTS-style topics from the stage:</p>
+<ul>
+<li>Listening for key words while you read aloud.</li>
+<li>Housing and rooms.</li>
+<li>Reading signs and notices.</li>
+<li>Getting around (transport, directions).</li>
+<li>Shopping and prices.</li>
+<li>Describing people and places.</li>
+<li>Workplace small talk.</li>
+<li>Filling in forms.</li>
+<li>Messages and notes.</li>
+</ul>
+<h2 id="flow-with-timings-4550-min">Flow with timings (~45–50 min)</h2>
+<p><strong>Warm-up (5 min).</strong> Write four short sentences on
+paper, one for each main tense: "I work in a shop." / "She is working
+now." / "We went to the market yesterday." / "I am going to call you
+tomorrow." Ask the student to read them silently and, in writing, label
+each one: PRESENT, NOW, PAST, or FUTURE. Confirm answers together. This
+wakes up the tense system before the review begins.</p>
+<p><strong>Review carousel (15 min).</strong> The student works through
+the <strong>Mixed Review</strong> on the student sheet — short sections
+that pull two or three items from each Stage 1 grammar point. Each
+section begins with a solved example. Move through them in order; do not
+let the student get stuck. If a section is clearly hard, make a quiet
+mental note (this is the progress-check part) and move on. Circulate and
+check as the student writes.</p>
+<p><strong>Practice (10 min).</strong> The student reads the short text
+on the student sheet (you may also read it aloud once while the student
+follows) and answers the comprehension questions in writing, in full
+sentences. This blends the practical topics (describing a person,
+routine, a past event, a plan) with the grammar.</p>
+<p><strong>Produce — student WRITES (12 min).</strong> The student
+completes <strong>Write about yourself</strong> — a paragraph of about
+six sentences using present, past, and future, built on the sentence
+frame. This is the main output and the clearest signal of readiness for
+Stage 2. Encourage true, real sentences about the student's own life.
+Let them take their time.</p>
+<p><strong>Wrap-up (5 min).</strong> Read the student's paragraph aloud
+yourself while the student follows on the page. Give gentle written
+corrections. Recap, in one written line, the three tenses they just
+used: <em>present = agora / rotina; past = ontem / antes; future =
+depois / plano.</em> Set the homework.</p>
+<h2 id="ready-for-stage-2">Ready for Stage 2?</h2>
+<p>Use the student's written work today to judge readiness. Stage 2
+builds on solid Stage 1 foundations, so look for control, not
+perfection.</p>
+<p>The student is ready to move on if, in writing, they can:</p>
+<ul>
+<li>Use the present simple correctly, including the <strong>-s</strong>
+on he / she / it most of the time.</li>
+<li>Form a simple question with <strong>do / does</strong> or a question
+word.</li>
+<li>Use <strong>there is / there are</strong> correctly with singular
+and plural.</li>
+<li>Tell the difference, in writing, between a routine (present simple)
+and an action now (present continuous).</li>
+<li>Put regular and irregular verbs into the past simple, getting the
+common irregulars (went, had, saw) right more often than not.</li>
+<li>Choose <strong>going to</strong> or <strong>will</strong> for a
+clear plan or prediction.</li>
+<li>Write a short paragraph that moves between present, past, and future
+without losing the meaning.</li>
+</ul>
+<p>Small, occasional slips (a missing <strong>-s</strong>, one wrong
+irregular verb) are normal and fine — the student is ready. If a whole
+area is still shaky (for example, the past simple is mostly guesswork,
+or questions collapse), spend one extra short session on just that topic
+before starting Stage 2, rather than holding the whole stage back.</p>
+<p>When you have decided, <strong>update
+<code>00-start-here/progress-tracker.md</code></strong>: mark Stage 1 as
+complete, note today's date, and write a one-line note on any topic to
+keep an eye on in Stage 2.</p>
+<h2 id="common-mistakes--gentle-corrections">Common mistakes &amp;
+gentle corrections</h2>
+<ul>
+<li><strong>"She work in a shop."</strong> → "She <strong>works</strong>
+in a shop." (Add <strong>-s</strong> for he / she / it.) PT: terceira
+pessoa leva <strong>-s</strong>.</li>
+<li><strong>"Do she works here?"</strong> → "<strong>Does</strong> she
+<strong>work</strong> here?" (Use <em>does</em> + base verb; the
+<em>-s</em> moves to <em>does</em>.) PT: em pergunta com <em>does</em>,
+o verbo fica na forma base.</li>
+<li><strong>"There is two rooms."</strong> → "There <strong>are</strong>
+two rooms." (Plural needs <em>are</em>.) PT: plural pede <em>there
+are</em>.</li>
+<li><strong>"I working now."</strong> → "I <strong>am</strong> working
+now." (Present continuous needs <em>be</em> + -ing.) PT: presente
+contínuo precisa de <em>am/is/are</em>.</li>
+<li><strong>"Yesterday I go to the market."</strong> → "Yesterday I
+<strong>went</strong> to the market." (Past simple, irregular.) PT:
+ontem = passado; <em>go</em> vira <em>went</em>.</li>
+<li><strong>"She goed home."</strong> → "She <strong>went</strong>
+home." (Irregular, not -ed.) PT: <em>go</em> é irregular, não leva
+<em>-ed</em>.</li>
+<li><strong>"I will to call you."</strong> → "I <strong>will
+call</strong> you." (No <em>to</em> after <em>will</em>.) PT: depois de
+<em>will</em>, verbo base sem <em>to</em>.</li>
+<li><strong>"She going to work tomorrow."</strong> → "She <strong>is
+going to</strong> work tomorrow." (<em>Going to</em> needs <em>be</em>.)
+PT: <em>going to</em> precisa de <em>am/is/are</em>.</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<p>On the student sheet: (1) the student rewrites four mixed sentences
+into the form asked (negative, question, or a different tense), and (2)
+the student writes a second short paragraph (about six sentences) about
+a family member or a friend — who they are, their routine now, something
+they did last week, and a plan for the future — reusing the same mix of
+present, past, and future. Bring the written work to the first Stage 2
+lesson.</p>
+
+<div class="nav-footer"><a href="../lesson-17-messages-and-notes/student-sheet.html">← Lesson 17 — Messages And Notes</a><a href="student-sheet.html">Lesson 18 — Stage 1 Review →</a></div>
+</div></div>
+</div>
+</body>
+</html>

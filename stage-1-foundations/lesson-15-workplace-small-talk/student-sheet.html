@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 15 — Workplace Small-Talk and Politeness — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="teacher-plan.html">Teacher plan</a>
+<a class="s active" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge student">📝 Student sheet</div>
+<h1 id="lesson-15--workplace-small-talk-and-politeness">Lesson 15 —
+Workplace Small-Talk and Politeness</h1>
+<p>At a new job, small kind words matter: a friendly greeting, a polite
+request, a short message to a coworker. In this lesson you will read and
+<strong>write</strong> polite workplace English. A big idea to remember:
+<strong>could</strong> and <strong>would</strong> are softer and more
+polite than <strong>can</strong> and <strong>will</strong>.</p>
+<h2 id="key-language">Key language</h2>
+<ul>
+<li><strong>How are you?</strong> / <strong>How's it going?</strong> —
+<em>Como vai? / Tudo bem?</em></li>
+<li><strong>Did you have a good weekend?</strong> — <em>Teve um bom fim
+de semana?</em></li>
+<li><strong>Could you…?</strong> / <strong>Would you mind…?</strong>
+(polite requests) — <em>Você poderia…? / Você se importaria
+de…?</em></li>
+<li><strong>Can I help you?</strong> — <em>Posso ajudar?</em></li>
+<li><strong>Excuse me.</strong> — <em>Com licença / Desculpe.</em></li>
+<li><strong>I'm sorry, I'm late.</strong> — <em>Desculpe, estou
+atrasado(a).</em></li>
+<li><strong>Thank you.</strong> / <strong>No problem.</strong> —
+<em>Obrigado(a). / Sem problema.</em></li>
+<li>Email words: <strong>Hi [name],</strong> / <strong>Thanks,</strong>
+/ <strong>Best,</strong> — <em>Oi [nome], / Obrigado(a), /
+Atenciosamente,</em></li>
+</ul>
+<blockquote>
+<p>Tip: <strong>Could you…, please?</strong> sounds kinder than
+<strong>Can you…?</strong> at work.</p>
+</blockquote>
+<h2 id="practice">Practice</h2>
+<h3 id="a-match-the-small-talk-question-to-a-good-answer">(a) Match the
+small-talk question to a good answer</h3>
+<p>Draw a line from each question to a suitable answer.</p>
+<p><strong>Example:</strong> <em>"How are you?"</em> → <strong>"I'm
+fine, thanks."</strong> ✅</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th></th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. How's it going?</td>
+<td></td>
+<td>a. Yes, it was great. I rested.</td>
+</tr>
+<tr>
+<td>2. Did you have a good weekend?</td>
+<td></td>
+<td>b. No problem!</td>
+</tr>
+<tr>
+<td>3. Can I help you?</td>
+<td></td>
+<td>c. Pretty good, thanks.</td>
+</tr>
+<tr>
+<td>4. Thank you so much.</td>
+<td></td>
+<td>d. Yes, please. Could you help me with this?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-make-the-blunt-request-polite">(b) Make the blunt request
+polite</h3>
+<p>Rewrite each blunt order as a polite request. Use <strong>Could you…,
+please?</strong></p>
+<p><strong>Example:</strong> <em>Give me the report.</em> →
+<strong>Could you give me the report, please?</strong> ✅</p>
+<p>Word bank: <em>Could you… please? / Would you mind…?</em></p>
+<ol type="1">
+<li>Send the email. → ___________________________________________</li>
+<li>Open the window. → ___________________________________________</li>
+<li>Help me with this box. →
+___________________________________________</li>
+</ol>
+<h3 id="c-put-the-short-message-in-the-correct-order">(c) Put the short
+message in the correct order</h3>
+<p>Number the lines 1–5 so the message makes sense.</p>
+<p><strong>Example (a different message, already ordered):</strong></p>
+<ol type="1">
+<li>Hi Sofia,</li>
+<li>I can't find the keys.</li>
+<li>Could you help me, please?</li>
+<li>Thanks,</li>
+<li>Lucas ✅</li>
+</ol>
+<p>Now order this message:</p>
+<p>___ Thanks, ___ Hi Marco, ___ Could you check it for me, please? ___
+I think there is a problem with the printer. ___ Ana</p>
+<h3 id="d-find-and-fix-the-errors">(d) Find and fix the errors</h3>
+<p>There are <strong>3 clear errors</strong> in this short note.
+Underline them and write the correct word above.</p>
+<blockquote>
+<p>Hi Pedro, I sorry, I'm late today. Can you to start the meeting
+without me? Thank, Diego</p>
+</blockquote>
+<h3 id="e-read-the-email-and-answer-in-writing">(e) Read the email and
+answer in writing</h3>
+<p>Read this email from your manager.</p>
+<blockquote>
+<p>Hi Maria,</p>
+<p>Thanks for your good work this week. Could you send me the sales
+report before Friday, please? Diego is new on the team — would you mind
+helping him on Monday morning? No problem if you have questions; just
+ask me.</p>
+<p>Best, Carlos</p>
+</blockquote>
+<p>Answer in full sentences.</p>
+<p><strong>Example:</strong> <em>Who wrote this email?</em> →
+<strong>Carlos wrote this email.</strong> ✅</p>
+<ol type="1">
+<li>What does Carlos want before Friday?
+___________________________________________</li>
+<li>Who is new on the team?
+___________________________________________</li>
+<li>When should Maria help Diego?
+___________________________________________</li>
+<li>What should Maria do if she has questions?
+___________________________________________</li>
+</ol>
+<h3 id="f-write-your-own-short-polite-message-45-lines">(f) Write your
+own short polite message (4–5 lines)</h3>
+<p>Write a short message to a coworker. Choose ONE: <strong>ask for
+help</strong>, or <strong>say you will be late</strong>. Use the frame
+below.</p>
+<p><strong>Frame:</strong></p>
+<ul>
+<li>Greeting: <em>Hi ____ ,</em></li>
+<li>Reason: <em>I ____ .</em> (why you are writing)</li>
+<li>Request: <em>Could you ____ , please?</em> or <em>Would you mind
+____ ?</em></li>
+<li>Thanks: <em>Thanks,</em></li>
+<li>Sign-off (your name): <em>____</em></li>
+</ul>
+<p><strong>Sentence starters to help you:</strong></p>
+<ul>
+<li><em>Hi Ana,</em></li>
+<li><em>I can't find the new files.</em> / <em>I think the bus is late
+this morning.</em></li>
+<li><em>Could you send them to me, please?</em> / <em>Would you mind
+starting without me?</em></li>
+<li><em>Thanks,</em></li>
+<li><em>(your name)</em></li>
+</ul>
+<p>Write here:</p>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="homework">Homework</h2>
+<ol type="1">
+<li><strong>Polite again:</strong> Rewrite as polite requests.
+<ul>
+<li><em>Close the door.</em> →
+___________________________________________</li>
+<li><em>Email the file today.</em> →
+___________________________________________</li>
+</ul></li>
+<li><strong>Fix it:</strong> There is 1 error in this line. Write it
+correctly.
+<ul>
+<li><em>Excuse me, can I helping you?</em> →
+___________________________________________</li>
+</ul></li>
+<li><strong>Write a message (4–5 lines):</strong> Write a short, polite
+message to your manager saying <strong>thank you</strong> for help this
+week. Use the frame from exercise (f): greeting, reason, a short request
+or kind line, thanks, sign-off. Bring it to the next lesson.</li>
+</ol>
+
+<div class="nav-footer"><a href="teacher-plan.html">← Lesson 15 — Workplace Small Talk · Teacher</a><a href="../lesson-16-filling-in-forms/teacher-plan.html">Lesson 16 — Filling In Forms · Teacher →</a></div>
+</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 5 — Listening for Key Words — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t active" href="teacher-plan.html">Teacher plan</a>
+<a class="s" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge teacher">👨‍🏫 For the teacher</div>
+<h1 id="lesson-5--listening-for-key-words">Lesson 5 — Listening for Key
+Words</h1>
+<h2 id="how-to-teach-this">How to teach this</h2>
+<p>This is the student's <strong>first gentle taste of IELTS
+Listening</strong>. Keep the mood light and low-pressure — the goal is a
+positive first experience, not a test.</p>
+<p>The whole lesson is <strong>listen → write</strong>. You read each
+short script aloud; the student writes what they catch. The student does
+<strong>not</strong> speak in this lesson — they only listen and
+write.</p>
+<p>Key teaching method for every script:</p>
+<ul>
+<li>Tell the student what kind of information to listen for
+<strong>before</strong> you read (e.g. "Listen for a name and a
+number").</li>
+<li>Read each script <strong>slowly and clearly, TWICE.</strong> First
+read: the student just listens. Second read: the student writes.</li>
+<li>In the real IELTS test the audio plays only <strong>once</strong>,
+but for this first lesson you read twice on purpose, so the student
+feels supported. You can mention this gently so the student understands
+you are making it easier today.</li>
+<li>Do not rush. Pause naturally at commas and full stops.</li>
+<li>If the student misses something, smile, re-read that one line once
+more, and move on. No pressure, no correction of "speed".</li>
+<li>Light Portuguese gloss is fine for new ideas (<em>palavra-chave</em>
+= key word).</li>
+</ul>
+<p>The big idea to plant: <strong>you do not need to catch every word —
+just the key facts.</strong> In Portuguese: <em>Não precisa entender
+cada palavra. Só precisa pegar as informações importantes — nomes,
+números, horas, lugares.</em></p>
+<h2 id="objective">Objective</h2>
+<p>By the end of the lesson the student can <strong>catch and write key
+information</strong> — names (including spelled-out names), numbers,
+times, dates, and places/addresses — from short spoken texts. This is
+the core IELTS Listening skill.</p>
+<h2 id="what-ielts-listening-is-brief">What IELTS Listening is
+(brief)</h2>
+<p>IELTS Listening is one of the four parts of the test. The student
+hears recordings (conversations and short talks) and answers questions
+while listening. A very common task type is <strong>filling in blanks in
+notes or a form</strong> — exactly what we practise today: catching a
+name, a number, a time, a place.</p>
+<p>In the real test the recording plays <strong>once only</strong>, and
+the accents vary. For more detail, point the student to
+<code>ielts/ielts-overview.md</code> (what the four parts are and how
+Listening is scored) and <code>ielts/accent-listening.md</code> (getting
+used to different English accents).</p>
+<p>Today we make it gentle: you read twice, the texts are short, and the
+student is told in advance what to listen for.</p>
+<h2 id="read-aloud-scripts">Read-aloud scripts</h2>
+<p>Read each script <strong>slowly, twice.</strong> The bold items are
+the key facts the student must catch and write. Do <strong>not</strong>
+read the bold formatting aloud — just say the words naturally. (The
+student sheet has matching blanks.)</p>
+<blockquote>
+<p><strong>Tip before you start:</strong> for spelled-out names, say
+each letter clearly with a small pause: "M — A — R — I — A". For phone
+numbers, group the digits and pause between groups.</p>
+</blockquote>
+<hr />
+<p><strong>Script A — a name and a number</strong> <em>(shortest;
+warm-up)</em></p>
+<blockquote>
+<p>"Hello. My name is <strong>Carla</strong>. My phone number is
+<strong>two-six-eight, four-one-five-five</strong>."</p>
+</blockquote>
+<p>Listen for: the name, the phone number (268 4155).</p>
+<hr />
+<p><strong>Script B — a time and a place</strong> <em>(2
+sentences)</em></p>
+<blockquote>
+<p>"The English class is on <strong>Monday</strong>. It starts at
+<strong>half past six</strong> in the evening. The room is number
+<strong>twelve</strong>."</p>
+</blockquote>
+<p>Listen for: the day (Monday), the time (6:30 / half past six), the
+room number (12).</p>
+<hr />
+<p><strong>Script C — a spelled-out name and an address</strong>
+<em>(2–3 sentences)</em></p>
+<blockquote>
+<p>"Good morning. My name is Diego — that is spelled <strong>D — I — E —
+G — O</strong>. I live at number <strong>forty-seven</strong>,
+<strong>Green Street</strong>. I am from <strong>Mexico</strong>."</p>
+</blockquote>
+<p>Listen for: the spelled name (DIEGO), the house number (47), the
+street (Green Street), the country (Mexico).</p>
+<hr />
+<p><strong>Script D — numbers, a date, and a price</strong> <em>(3
+sentences; longest)</em></p>
+<blockquote>
+<p>"Welcome to the library. It opens at <strong>nine o'clock</strong> in
+the morning and closes at <strong>eight</strong> in the evening. The
+library card is free for students, but a lost card costs <strong>five
+dollars</strong>. Your card is ready on <strong>the third of
+June</strong>."</p>
+</blockquote>
+<p>Listen for: open time (9:00), close time (8:00), the price (5 dollars
+/ $5), the date (3 June / 3rd of June).</p>
+<hr />
+<p><strong>Note-completion dialogue — a short booking</strong> <em>(4–5
+lines; read both speakers)</em></p>
+<p>Read this as a small conversation. Read both parts. The student fills
+a note grid on their sheet.</p>
+<blockquote>
+<p>A: "Hello, I'd like to book a room, please." B: "Of course. What is
+your name?" A: "It's <strong>Sofia Ramos</strong> — Ramos is <strong>R —
+A — M — O — S</strong>." B: "Thank you. And what day would you like?" A:
+"<strong>Friday</strong>, at <strong>ten o'clock</strong> in the
+morning. For <strong>three</strong> people, please."</p>
+</blockquote>
+<p>Listen for: name (Sofia Ramos), spelling of surname (RAMOS), day
+(Friday), time (10:00), number of people (3).</p>
+<h2 id="flow-with-timings-4550-min">Flow with timings (~45–50 min)</h2>
+<p><strong>Warm-up (5 min)</strong> — Lightly introduce the idea in
+Portuguese: today we listen and catch the important facts, not every
+word. No speaking needed — just listening and writing. Mention this is a
+first, easy look at IELTS Listening.</p>
+<p><strong>Present (8 min)</strong> — Show the student sheet. Walk
+through the worked EXAMPLE row together so they see exactly what "catch
+the key word and write it" means. Explain: you will read each script
+twice; first time just listen, second time write.</p>
+<p><strong>Practice (20 min)</strong> — Read <strong>Scripts A → B → C →
+D</strong> in order, each one twice, slowly. After each script, give a
+few seconds for writing, then move on. Tell the student before each one
+what to listen for. Do not show answers yet.</p>
+<p><strong>Produce — listen &amp; write (10 min)</strong> — Read the
+<strong>note-completion dialogue</strong> (both speakers), twice. The
+student completes the note grid. This is the "test-like" moment, but
+still supported (read twice).</p>
+<p><strong>Wrap-up (5–7 min)</strong> — Go back through the answers
+together gently. Praise what was caught correctly. For anything missed,
+re-read that single line once and let the student fill it in. End on
+encouragement: this is exactly the skill IELTS Listening tests, and the
+student is already doing it.</p>
+<h2 id="common-mistakes--gentle-corrections">Common mistakes &amp;
+gentle corrections</h2>
+<ul>
+<li><strong>Trying to write every word.</strong> Remind them (PT):
+<em>só as palavras-chave.</em> If they freeze trying to catch a whole
+sentence, point at the blank and name what to listen for ("just the
+number here").</li>
+<li><strong>Numbers: "half past six" vs "six thirty".</strong> Both are
+correct. Accept either <code>6:30</code>, <code>half past six</code>, or
+<code>6.30</code>. English often says half past / quarter past / quarter
+to — gloss briefly if needed.</li>
+<li><strong>"Thirteen" vs "thirty", "forty-seven" vs
+"seventy-four".</strong> These confuse beginners. If missed, re-read
+slowly stressing the ending. Accept the digits (47) or the words.</li>
+<li><strong>Spelled-out letters.</strong> A Portuguese speaker may
+expect Portuguese letter names. If they mishear a letter, just re-read
+that letter clearly once. Accept the correct written letters even if
+order of guessing was bumpy.</li>
+<li><strong>Dates.</strong> "The third of June" = 3 June / 3rd June /
+June 3. Accept any clear written form. Do not require a specific format
+today.</li>
+<li><strong>Price/currency.</strong> Accept <code>5 dollars</code>,
+<code>$5</code>, or <code>five dollars</code>.</li>
+<li>Always correct <strong>gently and silently in writing</strong> —
+point, re-read once, let them fix it. No pressure.</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<p>Set the at-home listening from <code>ielts/accent-listening.md</code>
+— gentle, short listening to get the ear used to natural English and
+different accents. Remind the student: just listen for the key facts
+(names, numbers, times, places), not every word.</p>
+<p>On the student sheet there is also a small written homework task: a
+short text for the student to read on their own (silently) and
+underline/write the key facts, so the "find the key word" habit
+continues between lessons. Bring the completed sheet next time.</p>
+
+<div class="nav-footer"><a href="../lesson-04-there-is-there-are/student-sheet.html">← Lesson 04 — There Is There Are</a><a href="student-sheet.html">Lesson 05 — Listening For Key Words →</a></div>
+</div></div>
+</div>
+</body>
+</html>

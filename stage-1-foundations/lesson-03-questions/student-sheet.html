@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3 — Questions: Yes/No and Wh- — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="teacher-plan.html">Teacher plan</a>
+<a class="s active" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge student">📝 Student sheet</div>
+<h1 id="lesson-3--questions-yesno-and-wh-">Lesson 3 — Questions: Yes/No
+and Wh-</h1>
+<p>You already know how to write present-simple sentences. Today you
+learn how to turn them into <strong>questions</strong> and how to write
+short answers. Read the rules, then write your answers in the
+spaces.</p>
+<h2 id="key-language">Key language</h2>
+<p><strong>Yes/no questions</strong> use a helper word at the front:
+<strong>do</strong> or <strong>does</strong>.</p>
+<ul>
+<li><strong>Do</strong> + I / you / we / they + base verb? → <em>Do you
+work here?</em></li>
+<li><strong>Does</strong> + he / she / it + base verb? → <em>Does she
+work here?</em></li>
+<li><em>PT: O português não tem o auxiliar do/does. Em inglês a pergunta
+precisa de do/does no começo.</em></li>
+</ul>
+<p><strong>The base-verb rule (important).</strong> After
+<strong>do/does</strong>, the main verb has <strong>no -s</strong>.</p>
+<ul>
+<li><em>Does he work?</em> ✓ <em>Does he works?</em> ✗</li>
+<li><em>PT: Depois de do/does, o verbo fica na forma base (sem -s). O
+does já carrega o -s.</em></li>
+</ul>
+<p><strong>Wh- questions</strong> start with a question word:
+<strong>what, where, when, who, how, why</strong>. Word order:
+<strong>question word + do/does + subject + base verb?</strong></p>
+<ul>
+<li><em>Where do you live?</em> <em>What does she like?</em> <em>When
+does the class start?</em></li>
+<li><em>PT: A palavra de pergunta vem primeiro, depois do/does, depois o
+sujeito, depois o verbo base.</em></li>
+</ul>
+<p><strong>Short answers</strong> reuse <em>do/does</em> (not the main
+verb).</p>
+<ul>
+<li><em>Do you work here? — Yes, I do. / No, I don't.</em></li>
+<li><em>Does she live here? — Yes, she does. / No, she
+doesn't.</em></li>
+</ul>
+<h2 id="practice">Practice</h2>
+<h3 id="a-turn-each-statement-into-a-yesno-question">(a) Turn each
+statement into a yes/no question</h3>
+<p><em>PT: Transforme a frase em pergunta de sim/não com do ou
+does.</em></p>
+<p>Example: <em>You like coffee.</em> → <strong>Do you like
+coffee?</strong></p>
+<ol type="1">
+<li><em>They live in Mexico.</em> → _______________________________</li>
+<li><em>He works on Saturday.</em> →
+_______________________________</li>
+<li><em>You speak English.</em> → _______________________________</li>
+<li><em>She likes her job.</em> → _______________________________</li>
+</ol>
+<h3 id="b-complete-each-wh--question-with-the-right-question-word">(b)
+Complete each Wh- question with the right question word</h3>
+<p>Word bank: <strong>what · where · when · who · how · why</strong>
+<em>PT: Complete a pergunta com a palavra de pergunta correta.</em></p>
+<p>Example: <strong>Where</strong> does she live? — In a small city.</p>
+<ol start="5" type="1">
+<li>_______ do you start work? — At nine o'clock.</li>
+<li>_______ does he study English? — Because he wants a new job.</li>
+<li>_______ do they eat for lunch? — A sandwich.</li>
+<li>_______ is your new manager? — Her name is Ana.</li>
+</ol>
+<h3 id="c-write-the-short-answer-yes---no-">(c) Write the short answer
+(Yes, … / No, …)</h3>
+<p><em>PT: Escreva a resposta curta usando do/does.</em></p>
+<p>Example: <em>Do you work here?</em> (yes) → <strong>Yes, I
+do.</strong></p>
+<ol start="9" type="1">
+<li><em>Does she live near the office?</em> (no) →
+_______________________</li>
+<li><em>Do they speak English?</em> (yes) → _______________________</li>
+<li><em>Does he like coffee?</em> (yes) → _______________________</li>
+<li><em>Do you work on Sunday?</em> (no) → _______________________</li>
+</ol>
+<h3 id="d-error-correction">(d) Error correction</h3>
+<p>Each question has one mistake. Cross it out and write the correct
+question. <em>PT: Cada pergunta tem um erro. Corrija.</em></p>
+<p>Example: <em>Do she works here?</em> → <strong>Does she work
+here?</strong></p>
+<ol start="13" type="1">
+<li><em>Does he works on Monday?</em> →
+_______________________________</li>
+<li><em>Where you live?</em> → _______________________________</li>
+<li><em>Does they like the city?</em> →
+_______________________________</li>
+<li><em>What she does for work?</em> →
+_______________________________</li>
+</ol>
+<h3 id="e-read-and-write-questions">(e) Read and write questions</h3>
+<p>Read the short paragraph. Then write <strong>3–4 questions</strong>
+you could ask about this person. <em>PT: Leia o texto e escreva 3-4
+perguntas sobre a pessoa.</em></p>
+<blockquote>
+<p>Carlos is from Mexico. He lives in a big city now. He works in a
+hotel. He starts work at seven o'clock. He likes his job, and he studies
+English in the evening.</p>
+</blockquote>
+<p>Example: <strong>Where does Carlos live?</strong></p>
+<ol start="17" type="1">
+<li><hr /></li>
+<li><hr /></li>
+<li><hr /></li>
+<li>_______________________________________________________
+(optional)</li>
+</ol>
+<h3 id="f-write-questions-for-a-new-coworker">(f) Write questions for a
+new coworker</h3>
+<p>Use the sentence starters to write <strong>4–5 questions</strong> you
+would ask a new coworker. <em>PT: Use os inícios de frase para escrever
+4-5 perguntas para um colega de trabalho novo.</em></p>
+<p>Example starter: <em>Where do you …</em> → <strong>Where do you
+live?</strong></p>
+<ol start="21" type="1">
+<li>Where do you _______________________________________?</li>
+<li>What time do you _______________________________________?</li>
+<li>Do you _______________________________________?</li>
+<li>How do you _______________________________________?</li>
+<li>Why do you _______________________________________? (optional)</li>
+</ol>
+<h2 id="homework">Homework</h2>
+<ol type="1">
+<li>Rewrite these four statements as <strong>yes/no questions</strong>:
+<ul>
+<li><em>You work in an office.</em> → __________________________</li>
+<li><em>She lives near here.</em> → __________________________</li>
+<li><em>They like the city.</em> → __________________________</li>
+<li><em>He studies English.</em> → __________________________</li>
+</ul></li>
+<li>Complete these four <strong>Wh- questions</strong> with the right
+question word (what / where / when / who / how / why):
+<ul>
+<li>_______ do you go after work?</li>
+<li>_______ time does the meeting start?</li>
+<li>_______ do you study English?</li>
+<li>_______ is your teacher?</li>
+</ul></li>
+<li>Write a <strong>short answer</strong> for each:
+<ul>
+<li><em>Do you work on Friday?</em> (yes) →
+__________________________</li>
+<li><em>Does she like coffee?</em> (no) →
+__________________________</li>
+<li><em>Do they live in a city?</em> (yes) →
+__________________________</li>
+</ul></li>
+</ol>
+<p>Remember: after <strong>do/does</strong>, the verb has <strong>no
+-s</strong>.</p>
+
+<div class="nav-footer"><a href="teacher-plan.html">← Lesson 03 — Questions · Teacher</a><a href="../lesson-04-there-is-there-are/teacher-plan.html">Lesson 04 — There Is There Are · Teacher →</a></div>
+</div></div>
+</div>
+</body>
+</html>

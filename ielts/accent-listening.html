@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accent Listening — Ear Training (for the teacher) — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="active" href="accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../stage-1-foundations/lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../stage-1-foundations/lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../stage-1-foundations/lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../stage-1-foundations/lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../stage-1-foundations/lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../stage-1-foundations/lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../stage-1-foundations/lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../stage-1-foundations/lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../stage-1-foundations/lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../stage-1-foundations/lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../stage-1-foundations/lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../stage-1-foundations/lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../stage-1-foundations/lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../stage-1-foundations/lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../stage-1-foundations/lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+
+<h1 id="accent-listening--ear-training-for-the-teacher">Accent Listening
+— Ear Training (for the teacher)</h1>
+<h2 id="why-ear-training-matters">Why ear training matters</h2>
+<p>The IELTS Listening test plays recordings spoken in a mix of
+<strong>native accents — British, Australian, and American</strong>. The
+student hears each recording <strong>only once</strong> and must
+understand it well enough to answer. So the goal of this resource is
+purely <strong>receptive</strong>: the student must <em>understand</em>
+spoken English. The student is <strong>never asked to pronounce or
+speak</strong> anything here — they listen.</p>
+<p>This is also one of the most practical skills for real life. Our
+student is preparing to live and work in an English-speaking
+environment. Following a manager's instructions, understanding a
+coworker, catching announcements, using the phone — all of this depends
+on a trained ear far more than on perfect grammar. Ear training is the
+bridge between "knows some English on paper" and "can function in an
+English-speaking workplace."</p>
+<p>A Portuguese-speaking beginner has a specific challenge: Portuguese
+and English map sounds very differently (vowel length, the English "th",
+reduced/unstressed syllables, fast linking between words). The ear has
+to be retrained gradually. <strong>Start very slow and very simple, then
+increase speed and accent variety over the stages.</strong></p>
+<hr />
+<h2 id="graded-listening-sources-free">Graded listening sources
+(free)</h2>
+<p>Work down this list as the student improves. Do <strong>not</strong>
+jump to IELTS audio in Stage 1 — it will sound like noise and discourage
+them. Each level below names a <em>type</em> of free resource (so you
+can pick a current, working channel/site) plus what to listen for and
+how to use it in class.</p>
+<h3
+id="level-1--single-words-and-very-short-phrases-absolute-beginner">Level
+1 — Single words and very short phrases (absolute beginner)</h3>
+<ul>
+<li><strong>Resource type:</strong> beginner ESL/EFL listening videos
+and apps that show a picture + say one word slowly (free "English for
+beginners" channels on YouTube; free starter lessons on apps like
+Duolingo or BBC Learning English's lowest-level clips). Children's
+first-words content (e.g. simple alphabet/number/animal videos) is also
+fine — it is slow and clearly enunciated.</li>
+<li><strong>Listen for:</strong> individual words the student already
+met in class; numbers, days, colours, common nouns.</li>
+<li><strong>How the teacher uses it:</strong> play one word, pause, ask
+the student to point to the right picture or write the word. Build
+confidence that they <em>can</em> catch sounds.</li>
+</ul>
+<h3 id="level-2--slow-graded-full-sentences-early-beginner">Level 2 —
+Slow, graded full sentences (early beginner)</h3>
+<ul>
+<li><strong>Resource type:</strong> graded/slow-English listening
+channels (e.g. "Easy English" style slow-speech videos, BBC Learning
+English beginner series, VOA Learning English at its slowest "Let's
+Learn English" levels). These speak in full but slow, clear sentences
+with simple vocabulary.</li>
+<li><strong>Listen for:</strong> sentence shape — where one word ends
+and the next begins; question vs statement intonation; key content
+words.</li>
+<li><strong>How the teacher uses it:</strong> play a sentence, the
+student writes the words they recognise (not the whole sentence).
+Teacher fills the gaps and replays.</li>
+</ul>
+<h3
+id="level-3--news-in-easy--simplified-english-high-beginner--low-intermediate">Level
+3 — News in easy / simplified English (high beginner → low
+intermediate)</h3>
+<ul>
+<li><strong>Resource type:</strong> "news in easy English" / "learning
+English" news (VOA Learning English news stories, BBC Learning English
+"News Review" at normal-but-clear speed, simplified-news podcasts for
+learners). Spoken clearly, slower than real news, real-world
+topics.</li>
+<li><strong>Listen for:</strong> the main idea, names, numbers, dates —
+the same information types IELTS asks about.</li>
+<li><strong>How the teacher uses it:</strong> play a short clip twice.
+After it, ask 2–3 simple comprehension points (What was it about? Any
+number? Any place name?). Student writes answers.</li>
+</ul>
+<h3
+id="level-4--podcasts-and-shows-for-english-learners-intermediate">Level
+4 — Podcasts and shows for English learners (intermediate)</h3>
+<ul>
+<li><strong>Resource type:</strong> free learner podcasts (e.g. "Learn
+English" podcast series from British Council/BBC, ESL conversation
+podcasts). These use natural conversation but are pitched at learners
+and often come with free transcripts.</li>
+<li><strong>Listen for:</strong> natural connected speech, contractions
+("gonna", "I'll", "don't"), turn-taking in a dialogue.</li>
+<li><strong>How the teacher uses it:</strong> listen once with no text,
+then a second time <em>with</em> the free transcript so the student sees
+how the sounds map to written words. This directly builds the ear for
+the IELTS conversation/dialogue sections.</li>
+</ul>
+<h3
+id="level-5--official-ielts-practice-listening-test-preparation">Level 5
+— Official IELTS practice listening (test preparation)</h3>
+<ul>
+<li><strong>Resource type:</strong> the <strong>free official IELTS
+practice Listening tests and sample recordings</strong> published by the
+official IELTS bodies (the British Council / IDP / Cambridge "Take
+IELTS" practice materials). These use the real format and the real mix
+of accents.</li>
+<li><strong>Listen for:</strong> following along while reading the
+questions; catching spelled-out names and numbers; not panicking when
+the speaker is fast or has an unfamiliar accent.</li>
+<li><strong>How the teacher uses it:</strong> start by playing sections
+<strong>twice</strong> even though the real test plays once — build up
+to one play only as a later stage. Always do the answers together
+afterwards.</li>
+</ul>
+<h3 id="level-6--real-native-media-stretch--real-world-prep">Level 6 —
+Real native media (stretch / real-world prep)</h3>
+<ul>
+<li><strong>Resource type:</strong> free native-English public media
+(major public broadcasters' free news streams and podcasts) plus
+everyday native content the student enjoys (free news clips, simple
+documentaries with native speakers). This is real, unsimplified
+native-speaker speech.</li>
+<li><strong>Listen for:</strong> getting the gist even when not every
+word is clear — exactly what real life and the workplace demand.</li>
+<li><strong>How the teacher uses it:</strong> keep it low-pressure. The
+goal at this level is <em>exposure and gist</em>, not catching
+everything. Celebrate understanding the main point.</li>
+</ul>
+<hr />
+<h2 id="weekly-listening-routine-for-the-student">Weekly listening
+routine (for the student)</h2>
+<p>Keep it <strong>light and daily</strong> for a beginner — a little
+every day beats one long session. It grows across the stages.</p>
+<p><strong>Early stages (Stage 1–2): about 5 minutes a day, 5 days a
+week</strong></p>
+<ol type="1">
+<li><strong>Listen</strong> to one short Level 1–2 clip (one word or one
+sentence at a time).</li>
+<li><strong>Write down</strong> every word you recognise — just the
+words, don't worry about full sentences.</li>
+<li><strong>Bring the list to class.</strong> The teacher reviews it,
+replays the clip, and fills in what was missed.</li>
+</ol>
+<p><strong>Middle stages: about 10–15 minutes a day</strong></p>
+<ul>
+<li>Mostly <strong>active</strong> listening (Level 3–4): listen, write
+what you caught, then check against the transcript.</li>
+<li>Add a little <strong>passive</strong> listening: have English audio
+playing in the background while doing chores — just to get the ear used
+to the rhythm, no writing needed.</li>
+</ul>
+<p><strong>Later stages (IELTS-focused): about 20 minutes a
+day</strong></p>
+<ul>
+<li>One <strong>active</strong> session on Level 5 (official IELTS
+practice) with the question sheet.</li>
+<li>Top up with Level 6 native media for real-accent exposure.</li>
+</ul>
+<p><strong>The simple loop at every stage:</strong> <em>listen → write
+down the words you recognise → teacher reviews and replays.</em> That
+loop is the whole method — easy to keep up, and it makes progress
+visible week to week.</p>
+<hr />
+<h2 id="note-on-how-this-connects-to-lessons">Note on how this connects
+to lessons</h2>
+<p>Lessons <strong>from Stage 1 onward</strong> will point the student
+back to this resource as the IELTS listening "drip" — a small, steady
+habit running alongside the main course.</p>
+<p>In class, listening practice usually takes the form of
+<strong>dictation: the teacher says a word, phrase, or sentence, and the
+student writes it down.</strong> This fits the core rule perfectly — the
+student is <strong>listening and writing, never speaking</strong> — and
+it is the most direct way to train the ear and check, word by word, what
+the student can and cannot yet hear.</p>
+
+<div class="nav-footer"><a href="ielts-overview.html">← IELTS General Training — Overview (for the teacher)</a><a href="../stage-1-foundations/lesson-01-present-simple-daily-routines/teacher-plan.html">Lesson 01 — Present Simple Daily Routines · Teacher →</a></div>
+</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Placement Check — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="active" href="placement-check.html">Placement Check</a>
+<a class="" href="curriculum-map.html">Curriculum Map</a>
+<a class="" href="progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../stage-1-foundations/lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../stage-1-foundations/lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../stage-1-foundations/lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../stage-1-foundations/lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../stage-1-foundations/lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../stage-1-foundations/lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../stage-1-foundations/lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../stage-1-foundations/lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../stage-1-foundations/lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../stage-1-foundations/lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../stage-1-foundations/lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../stage-1-foundations/lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../stage-1-foundations/lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../stage-1-foundations/lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../stage-1-foundations/lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+
+<h1 id="placement-check">Placement Check</h1>
+<h2 id="intro-to-read-aloud-to-the-student-portuguese">Intro to read
+aloud to the student (Portuguese)</h2>
+<blockquote>
+<p><strong>Olá! Que bom ter você aqui.</strong> Antes da nossa primeira
+aula, eu só quero conhecer um pouquinho o que você já sabe — não para te
+avaliar, mas para eu saber por onde a gente começa. <strong>Não existe
+resposta errada e você não precisa falar nada se não quiser.</strong> A
+maior parte é só apontar, reconhecer e, às vezes, escrever. Vai ser
+tranquilo e rápido, uns 10 a 15 minutos. Pode ficar à vontade, tá? Vamos
+com calma. 😊</p>
+</blockquote>
+<hr />
+<h2 id="teacher-instructions-read-this-first">Teacher instructions (read
+this first)</h2>
+<ul>
+<li><strong>Idioma:</strong> Fale <strong>tudo em português</strong> com
+o aluno durante esta checagem. O inglês aparece só nos itens que você
+mostra (letras, palavras, números).</li>
+<li><strong>Objetivo:</strong> Descobrir o ponto de partida real — NÃO é
+uma prova, é uma conversa amigável.</li>
+<li><strong>Tempo:</strong> ~10–15 minutos. Sem pressa. Se o aluno
+cansar ou ficar nervoso, pare e continue depois.</li>
+<li><strong>Regra de ouro:</strong> O aluno <strong>NUNCA é obrigado a
+falar</strong>. Quase todos os probes são de <strong>reconhecer,
+apontar, ouvir ou escrever</strong>. O único probe de fala é
+<strong>OPCIONAL</strong> (Probe 6) — se ele não quiser, pule sem
+comentar.</li>
+<li><strong>Como conduzir:</strong> Suba a escada do mais fácil para o
+mais difícil. Se o aluno acertar com folga, suba. Se travar, anote e
+siga em frente — nada de insistir.</li>
+<li><strong>Materiais:</strong> papel e caneta, e estes itens impressos
+ou na tela (letras grandes, números grandes, e 4 figuras simples).</li>
+<li><strong>Postura:</strong> Elogie o esforço ("isso!", "muito bem",
+"tá ótimo"), nunca corrija de forma dura. Sorria.</li>
+</ul>
+<hr />
+<h2 id="the-ladder-of-probes-easiest--hardest">The ladder of probes
+(easiest → hardest)</h2>
+<h3 id="probe-1--letter-recognition-reconhecer-letras">Probe 1 — Letter
+recognition (reconhecer letras)</h3>
+<p><strong>Mostre estas letras espalhadas na folha/tela:</strong></p>
+<pre><code>A   E   M   S   B   O   T   I   K   Y   W   R   N   L   D</code></pre>
+<ul>
+<li><strong>O que o professor faz:</strong> Diga uma letra em português
+("me mostra o <strong>A</strong>", "cadê o <strong>E</strong>?", "aponta
+o <strong>S</strong>"). Peça 6–8 letras, sem ordem. Diga ao aluno em
+português: <em>"Eu falo uma letra e você só aponta, não precisa
+falar."</em></li>
+<li><strong>O que observar:</strong> Ele aponta a letra certa? Reconhece
+a maioria, algumas, ou nenhuma?</li>
+<li><strong>Nota factual:</strong> <strong>K, W e Y FAZEM parte do
+alfabeto português</strong> (oficial desde 2009). Então não estranhe se
+o aluno já as conhecer — isso é normal.</li>
+<li><strong>O que o resultado significa:</strong>
+<ul>
+<li>Reconhece quase todas → já tem base de letras, pode avançar
+rápido.</li>
+<li>Reconhece algumas → base parcial, reforçar no começo.</li>
+<li>Reconhece poucas/nenhuma → começar do zero com letras (e ver o Probe
+7 com atenção).</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="probe-2--write-their-own-name-escrever-o-próprio-nome">Probe 2 —
+Write their own name (escrever o próprio nome)</h3>
+<ul>
+<li><strong>O que o professor faz:</strong> Entregue caneta e papel. Em
+português: <em>"Você pode escrever o seu nome aqui pra mim?"</em> Se
+quiser, peça também a cidade onde mora.</li>
+<li><strong>O que observar:</strong> Escreve o nome com firmeza? Segura
+a caneta com naturalidade? Forma as letras sem dificuldade? (Estamos
+olhando a habilidade física e de escrita, não a ortografia.)</li>
+<li><strong>O que o resultado significa:</strong>
+<ul>
+<li>Escreve com facilidade → confortável com escrita/caneta.</li>
+<li>Escreve com esforço ou copiando devagar → motricidade da escrita
+ainda em desenvolvimento; ir mais devagar na parte de escrever.</li>
+<li>Não consegue escrever o nome → grande sinal para o Probe 7
+(alfabetização).</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="probe-3--number-recognition-reconhecer-números-020">Probe 3 —
+Number recognition (reconhecer números, 0–20)</h3>
+<p><strong>Mostre os números na folha/tela:</strong></p>
+<pre><code>0   1   2   3   4   5   6   7   8   9   10
+11   12   13   14   15   16   17   18   19   20</code></pre>
+<ul>
+<li><strong>O que o professor faz:</strong> Fale um número <strong>em
+português</strong> ("aponta o <strong>sete</strong>", "cadê o
+<strong>quinze</strong>?", "me mostra o <strong>vinte</strong>", "e o
+<strong>zero</strong>?"). Peça uns 6–8, misturando pequenos e grandes.
+Lembre: <em>"Só apontar."</em></li>
+<li><strong>O que observar:</strong> Aponta o número certo? Acerta os de
+0–10? E os de 11–20?</li>
+<li><strong>O que o resultado significa:</strong>
+<ul>
+<li>Reconhece 0–20 com facilidade → ótimo, números podem passar
+rápido.</li>
+<li>Reconhece 0–10 mas trava de 11–20 → reforçar dezenas no início.</li>
+<li>Reconhece poucos → trabalhar números desde o básico.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="probe-4--word--picture-matching-ligar-palavra-e-figura">Probe 4
+— Word + picture matching (ligar palavra e figura)</h3>
+<p><strong>Mostre estas 4 figuras simples e, embaralhadas, estas 4
+palavras em inglês:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Figura</th>
+<th>Palavra em inglês</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐶 (cachorro)</td>
+<td><strong>DOG</strong></td>
+</tr>
+<tr>
+<td>🏠 (casa)</td>
+<td><strong>HOUSE</strong></td>
+</tr>
+<tr>
+<td>🚗 (carro)</td>
+<td><strong>CAR</strong></td>
+</tr>
+<tr>
+<td>💧 (água / copo d'água)</td>
+<td><strong>WATER</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>O que o professor faz:</strong> Aponte uma figura e pergunte
+em português: <em>"Qual destas palavras combina com esta figura?"</em>
+Não diga a resposta. Deixe o aluno ligar palavra ↔︎ figura (com o dedo ou
+riscando).</li>
+<li><strong>O que observar:</strong> Consegue ligar
+<strong>alguma</strong> palavra à figura? Reconhece o formato da palavra
+escrita?</li>
+<li><strong>O que o resultado significa:</strong>
+<ul>
+<li>Liga alguma/várias → já teve algum contato com inglês escrito; pode
+acelerar.</li>
+<li>Não liga nenhuma → totalmente iniciante em inglês (esperado). Tudo
+bem.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="probe-5--comprehension-with-gesture-entender-uma-instrução-simples">Probe
+5 — Comprehension with gesture (entender uma instrução simples)</h3>
+<ul>
+<li><strong>O que o professor faz:</strong> Fale uma instrução curta
+<strong>em inglês</strong> acompanhada de um gesto/olhar discreto, e
+veja se o aluno entende:
+<ol type="1">
+<li><em>"Point to the door."</em> (aponte levemente com o queixo, depois
+pare)</li>
+<li><em>"Stand up."</em> (use só a palavra; se ele não reagir, faça o
+gesto)</li>
+<li><em>"Show me your hand."</em></li>
+</ol></li>
+<li><strong>O que observar:</strong> O aluno reage ao
+<strong>inglês</strong> falado? Entende com gesto? Entende sem gesto? Ou
+não reage?</li>
+<li><strong>O que o resultado significa:</strong>
+<ul>
+<li>Entende sem gesto → já tem alguma escuta em inglês; pode
+avançar.</li>
+<li>Entende só com gesto → iniciante típico; construir escuta aos
+poucos.</li>
+<li>Não reage → começar do absoluto zero na escuta (normal).</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="probe-6--speaking-probe-opcional--nunca-insista-green_circle-opcional">Probe
+6 — Speaking probe (OPCIONAL — nunca insista) 🟢 OPCIONAL</h3>
+<blockquote>
+<p><strong>ATENÇÃO: este é o único probe de fala e é 100% OPCIONAL. Se o
+aluno hesitar, pule imediatamente e sem comentar. Não force, não repita,
+não espere.</strong></p>
+</blockquote>
+<ul>
+<li><strong>O que o professor faz:</strong> Em português, com leveza:
+<em>"Se você quiser — só se quiser — pode dizer o seu nome em inglês,
+tipo 'My name is…'. Mas não tem problema nenhum se preferir não falar
+agora."</em></li>
+<li><strong>O que observar (se ele falar):</strong> Tenta dizer o nome?
+Solta algum cumprimento ("hello", "hi", "good morning")? A pronúncia não
+importa — só a disposição.</li>
+<li><strong>O que o resultado significa:</strong>
+<ul>
+<li>Fala algo → confortável para arriscar; ótimo, mas sem pressão
+futura.</li>
+<li>Prefere não falar → perfeitamente normal; planejar muitas atividades
+sem fala obrigatória.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="probe-7--first-language-literacy-alfabetização-em-português-star-importante">Probe
+7 — First-language literacy (alfabetização em português) ⭐
+IMPORTANTE</h3>
+<blockquote>
+<p>Este probe é o mais importante para decidir o <strong>ritmo</strong>
+do curso.</p>
+</blockquote>
+<ul>
+<li><strong>O que o professor faz:</strong>
+<ol type="1">
+<li><strong>Leitura:</strong> Escreva uma frase simples em português e
+peça: <em>"Você pode ler isto pra mim, em voz alta ou só com os olhos?
+Pode me dizer o que está escrito."</em>
+<blockquote>
+<p><strong>O cachorro está na casa.</strong></p>
+</blockquote></li>
+<li><strong>Escrita:</strong> Diga uma frase curta em português e peça
+para escrever (ditado): <em>"Escreve pra mim: <strong>Eu gosto de
+água.</strong>"</em></li>
+</ol></li>
+<li><strong>O que observar:</strong> O aluno lê português com fluência?
+Escreve a frase ditada? Lê devagar soletrando? Não consegue ler/escrever
+na própria língua?</li>
+<li><strong>O que o resultado significa (decisivo para o
+ritmo):</strong>
+<ul>
+<li><strong>Lê e escreve bem em português</strong> → pode aprender
+inglês num ritmo normal; o desafio é só a língua nova, não a
+alfabetização.</li>
+<li><strong>Lê/escreve com dificuldade</strong> → ir mais devagar,
+reforçar leitura e escrita junto com o inglês.</li>
+<li><strong>Não lê/escreve em português</strong> → <strong>prioridade em
+alfabetização</strong>: ritmo bem mais lento, focado em letras, sons e
+escrita à mão antes de avançar em conteúdo. Isso muda totalmente o plano
+— e tudo bem.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="results-rubric-recomendação-concreta">Results rubric
+(recomendação concreta)</h2>
+<p>Marque o cenário que mais se parece com o aluno:</p>
+<h3
+id="arrow_forward-recomendação-a--começar-na-lição-1-quase-tudo-é-novo">▶️
+Recomendação A — <strong>Começar na Lição 1</strong> ("quase tudo é
+novo")</h3>
+<p>Use esta opção se a <strong>maioria</strong> for verdade:</p>
+<ul>
+<li>Reconhece <strong>poucas</strong> letras (Probe 1).</li>
+<li>Tem dificuldade ou não escreve o próprio nome (Probe 2).</li>
+<li>Reconhece <strong>poucos</strong> números, ou só alguns de 0–10
+(Probe 3).</li>
+<li><strong>Não</strong> liga palavras inglesas a figuras (Probe
+4).</li>
+<li>Só entende inglês <strong>com gesto</strong> ou não reage (Probe
+5).</li>
+<li>(Probe 7) Lê/escreve português com dificuldade ou não lê.</li>
+</ul>
+<p>➡️ <strong>Ação:</strong> Comece na <strong>Lição 1</strong> e vá com
+calma. Se o Probe 7 mostrar pouca/nenhuma alfabetização, vá
+<strong>ainda mais devagar</strong>, com foco extra em letras, sons e
+escrita à mão.</p>
+<h3
+id="fast_forward-recomendação-b--pode-passar-rápido-pelas-lições-13">⏩
+Recomendação B — <strong>Pode passar rápido pelas Lições
+1–3</strong></h3>
+<p>Use esta opção se a <strong>maioria</strong> for verdade:</p>
+<ul>
+<li>Reconhece <strong>quase todas</strong> as letras (Probe 1).</li>
+<li>Escreve o próprio nome com facilidade (Probe 2).</li>
+<li>Reconhece números <strong>0–20</strong> com facilidade (Probe
+3).</li>
+<li>Liga <strong>alguma(s)</strong> palavra(s) inglesa(s) a figuras
+(Probe 4).</li>
+<li>Entende inglês falado, mesmo que <strong>com</strong> gesto (Probe
+5).</li>
+<li>(Probe 7) Lê e escreve <strong>bem</strong> em português.</li>
+</ul>
+<p>➡️ <strong>Ação:</strong> Revise rapidamente as <strong>Lições
+1–3</strong> (letras, números, palavras básicas) confirmando o que já
+sabe, e avance mais cedo para conteúdo novo.</p>
+<blockquote>
+<p><strong>Caso misto:</strong> Se cair entre A e B, prefira
+<strong>A</strong> (começar na Lição 1) e apenas acelere as partes que o
+aluno já dominar. É mais seguro reforçar a base do que pular e deixar
+lacunas — sobretudo porque o aluno vai precisar do IELTS General
+Training mais à frente.</p>
+</blockquote>
+<hr />
+<h2 id="record-the-results">Record the results</h2>
+<p>📋 <strong>Anote os resultados desta checagem no arquivo
+<code>progress-tracker.md</code></strong> — qual probe o aluno fez, o
+que observou, e qual recomendação (A ou B) você escolheu. Isso vai guiar
+o planejamento da Lição 1 e mostrar a evolução ao longo do tempo.</p>
+
+<div class="nav-footer"><a href="teaching-basics.html">← Teaching Basics: Your Crash Course</a><a href="curriculum-map.html">Curriculum Map →</a></div>
+</div></div>
+</div>
+</body>
+</html>

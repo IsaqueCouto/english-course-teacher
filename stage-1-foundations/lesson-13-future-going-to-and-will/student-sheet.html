@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 13 — The Future: "going to" and "will" — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="teacher-plan.html">Teacher plan</a>
+<a class="s active" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge student">📝 Student sheet</div>
+<h1 id="lesson-13--the-future-going-to-and-will">Lesson 13 — The Future:
+"going to" and "will"</h1>
+<p>In this lesson you will write about the future. There are two ways to
+talk about the future in English. You use <strong>be going to</strong>
+for plans you already decided, and <strong>will</strong> for decisions
+you make right now, for predictions, and for offers. Read the rules,
+then write.</p>
+<h2 id="key-language">Key language</h2>
+<p><strong>1. be going to + base verb</strong> — for plans and
+intentions (you already decided).</p>
+<ul>
+<li>I <strong>am going to</strong> study tonight.</li>
+<li>She <strong>is going to</strong> work tomorrow.</li>
+<li>They <strong>are going to</strong> move next year.</li>
+<li>Negative: She <strong>isn't going to</strong> work Sunday. / We
+<strong>aren't going to</strong> travel.</li>
+<li>PT: <em>going to</em> = um plano já decidido. Use <strong>am / is /
+are</strong> + <strong>going to</strong> + verbo base.</li>
+</ul>
+<p><strong>2. will + base verb</strong> — for decisions made now,
+predictions, and offers.</p>
+<ul>
+<li>It <strong>will</strong> rain tomorrow. (prediction)</li>
+<li>I**'ll** help you. (offer — 'll = will)</li>
+<li>I <strong>will</strong> call you soon. (decision now)</li>
+<li>Negative: I <strong>won't</strong> be late. (won't = will not)</li>
+<li>PT: <em>will</em> = decisão na hora, previsão, ou oferta. Use
+<strong>will</strong> + verbo base (igual para todos).</li>
+</ul>
+<p><strong>Two small traps (be careful!):</strong></p>
+<ul>
+<li>After <strong>will</strong>, use the base verb with <strong>no
+"to"</strong>: ✅ <em>I will help</em> / ❌ <em>I will to help</em>.
+(PT: nada de <em>to</em> depois de <em>will</em>.)</li>
+<li><strong>going to</strong> needs the verb <strong>be</strong>: ✅
+<em>She is going to work</em> / ❌ <em>She going to work</em>. (PT:
+<em>going to</em> precisa de <em>am/is/are</em>.)</li>
+</ul>
+<p><strong>Future time markers:</strong> tomorrow, next week, next year,
+soon, tonight.</p>
+<h2 id="practice">Practice</h2>
+<h3 id="a-write-going-to-sentences">(a) Write "going to" sentences</h3>
+<p>Use <strong>am / is / are + going to + base verb</strong>. Add a time
+marker from the word bank.</p>
+<p><strong>Word bank (time markers):</strong> tonight · tomorrow · next
+week · next year · soon</p>
+<p><em>Example:</em> (I / cook dinner) → <strong>I am going to cook
+dinner tonight.</strong></p>
+<ol type="1">
+<li>(She / clean the house) → ____________________________________</li>
+<li>(We / visit my family) → ____________________________________</li>
+<li>(They / buy a car) → ____________________________________</li>
+<li>(He / start a new job) → ____________________________________</li>
+<li>(I / learn English) → ____________________________________</li>
+</ol>
+<h3 id="b-choose-going-to-or-will">(b) Choose: going to or will?</h3>
+<p>Read each situation. Write the correct form. Plan already decided →
+<strong>going to</strong>. Decision now, prediction, or offer →
+<strong>will</strong>.</p>
+<p><em>Example:</em> Look at those dark clouds. → It
+<strong>will</strong> rain. (prediction)</p>
+<ol type="1">
+<li>We bought the tickets. We ______________ (going to / will) travel
+next week. ( ______ plan or prediction? )</li>
+<li>Your bag looks heavy. I ______________ (going to / will) help you. (
+______ offer? )</li>
+<li>She has a plan: she ______________ (going to / will) study medicine
+next year. ( ______ )</li>
+<li>I think the test ______________ (going to / will) be easy. ( ______
+)</li>
+<li>The phone is ringing. Don't worry, I ______________ (going to /
+will) answer it. ( ______ )</li>
+</ol>
+<h3 id="c-make-it-negative">(c) Make it negative</h3>
+<p>Rewrite each sentence in the negative. Use <strong>isn't/aren't going
+to</strong> or <strong>won't</strong>.</p>
+<p><em>Example:</em> She is going to work on Sunday. → <strong>She isn't
+going to work on Sunday.</strong></p>
+<ol type="1">
+<li>I will be late. → ____________________________________</li>
+<li>They are going to move next year. →
+____________________________________</li>
+<li>He is going to buy a new phone. →
+____________________________________</li>
+<li>It will rain tomorrow. → ____________________________________</li>
+</ol>
+<h3 id="d-find-and-fix-the-mistake">(d) Find and fix the mistake</h3>
+<p>Each sentence has one clear mistake. Write the correct sentence.</p>
+<p><em>Example:</em> I will to help you. → <strong>I will help
+you.</strong></p>
+<ol type="1">
+<li>She going to start a new job. →
+____________________________________</li>
+<li>He will helps me tomorrow. →
+____________________________________</li>
+<li>We are going to traveled next week. →
+____________________________________</li>
+<li>They will to visit us soon. →
+____________________________________</li>
+</ol>
+<h3 id="e-read-and-answer-in-writing">(e) Read and answer in
+writing</h3>
+<p>Read about Maria's plans. Then answer the questions in full
+sentences.</p>
+<blockquote>
+<p>Maria is from Mexico. Next month she is going to move to a new city
+for work. She is going to start her job on a Monday. She thinks the city
+will be cold in winter, so she is going to buy a warm coat soon. Her
+friend says, "Don't worry, I will help you with the boxes." Maria is
+happy. She will call her family every week.</p>
+</blockquote>
+<ol type="1">
+<li>Where is Maria from? → ____________________________________</li>
+<li>What is Maria going to do next month? →
+____________________________________</li>
+<li>What is she going to buy, and why? →
+____________________________________</li>
+<li>What will Maria do every week? →
+____________________________________</li>
+</ol>
+<h3 id="f-write-about-you">(f) Write about YOU</h3>
+<p>Write 4–5 sentences about your own future. Write <strong>four
+plans</strong> for next week with <strong>going to</strong>, and
+<strong>one prediction</strong> with <strong>will</strong>. Use the
+sentence starters.</p>
+<p><em>Example:</em> Next week, I am going to start a new class.</p>
+<ol type="1">
+<li>Next week, I am going to ____________________________________</li>
+<li>On the weekend, I am going to
+____________________________________</li>
+<li>Soon, I am going to ____________________________________</li>
+<li>Next year, I am going to ____________________________________</li>
+<li>(one prediction) I think tomorrow it will
+____________________________________</li>
+</ol>
+<h2 id="homework">Homework</h2>
+<ol type="1">
+<li>Rewrite these four sentences in the <strong>negative</strong>:
+<ul>
+<li>I will call you tonight.</li>
+<li>We are going to study tomorrow.</li>
+<li>She is going to cook dinner.</li>
+<li>It will be hot next week.</li>
+</ul></li>
+<li>Write <strong>five short sentences</strong> about your plans for the
+weekend: <strong>four "going to" plans</strong> and <strong>one "will"
+prediction</strong>. Use the starters: <em>On Saturday, I am going to...
+/ On Sunday, I am going to... / I am going to... / I am also going to...
+/ I think it will...</em></li>
+</ol>
+
+<div class="nav-footer"><a href="teacher-plan.html">← Lesson 13 — Future Going To And Will · Teacher</a><a href="../lesson-14-describing-people-and-places/teacher-plan.html">Lesson 14 — Describing People And Places · Teacher →</a></div>
+</div></div>
+</div>
+</body>
+</html>

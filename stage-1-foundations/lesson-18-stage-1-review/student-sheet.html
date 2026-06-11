@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 18 — Stage 1 Review — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="teacher-plan.html">Teacher plan</a>
+<a class="s active" href="student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge student">📝 Student sheet</div>
+<h1 id="lesson-18--stage-1-review">Lesson 18 — Stage 1 Review</h1>
+<p>This is the last lesson of Stage 1. Today you bring everything
+together. You will write present, past, and future sentences, read a
+short text, and write a short paragraph about yourself. Each part starts
+with an example, so you always see the pattern first. Take your time and
+write clearly.</p>
+<h2 id="mixed-review">Mixed Review</h2>
+<h3 id="a-present-simple">(a) Present simple</h3>
+<p>Use the present simple for routines and facts. Remember: he / she /
+it takes <strong>-s</strong>.</p>
+<p><em>Example:</em> (I / work / in a shop) → <strong>I work in a
+shop.</strong></p>
+<ol type="1">
+<li>(They / live / in a small town) →
+____________________________________</li>
+<li>(We / start / work at eight) →
+____________________________________</li>
+<li>(I / drink / coffee every morning) →
+____________________________________</li>
+</ol>
+<h3 id="b-he--she--it-and-the--s-ending">(b) He / she / it and the -s
+ending</h3>
+<p>Add the correct verb. Remember the <strong>-s</strong> for he, she,
+and it.</p>
+<p><em>Example:</em> My sister ______ (work) in a hospital. → My sister
+<strong>works</strong> in a hospital.</p>
+<ol type="1">
+<li>He ______ (live) near the station.</li>
+<li>She ______ (study) English every day.</li>
+<li>The bus ______ (stop) here at nine.</li>
+</ol>
+<h3 id="c-questions">(c) Questions</h3>
+<p>Make a question. Use <strong>Do / Does</strong> or the question word
+given.</p>
+<p><em>Example:</em> (she / work / on Sundays?) → <strong>Does she work
+on Sundays?</strong></p>
+<ol type="1">
+<li>(you / live / near here?) →
+____________________________________</li>
+<li>(Where / he / work?) → ____________________________________</li>
+<li>(What time / the shop / open?) →
+____________________________________</li>
+</ol>
+<h3 id="d-there-is--there-are">(d) There is / There are</h3>
+<p>Use <strong>there is</strong> for one thing and <strong>there
+are</strong> for more than one.</p>
+<p><em>Example:</em> (two bedrooms / in the flat) → <strong>There are
+two bedrooms in the flat.</strong></p>
+<ol type="1">
+<li>(a big kitchen / in the house) →
+____________________________________</li>
+<li>(three buses / every hour) →
+____________________________________</li>
+<li>(a supermarket / near the station) →
+____________________________________</li>
+</ol>
+<h3 id="e-present-continuous-actions-now">(e) Present continuous
+(actions now)</h3>
+<p>Use <strong>am / is / are + verb-ing</strong> for what is happening
+now.</p>
+<p><em>Example:</em> (I / read / a book / now) → <strong>I am reading a
+book now.</strong></p>
+<ol type="1">
+<li>(She / cook / dinner / right now) →
+____________________________________</li>
+<li>(They / wait / for the bus) →
+____________________________________</li>
+<li>(I / write / a message) → ____________________________________</li>
+</ol>
+<h3 id="f-past-simple--regular-verbs">(f) Past simple — regular
+verbs</h3>
+<p>Past simple regular verbs usually end in <strong>-ed</strong>.</p>
+<p><em>Example:</em> Yesterday I (work) late. → Yesterday I
+<strong>worked</strong> late.</p>
+<ol type="1">
+<li>Last week we (visit) my family. →
+____________________________________</li>
+<li>She (clean) the house on Saturday. →
+____________________________________</li>
+<li>They (start) a new job last month. →
+____________________________________</li>
+</ol>
+<h3 id="g-past-simple--irregular-verbs">(g) Past simple — irregular
+verbs</h3>
+<p>These verbs do not take <strong>-ed</strong>. Use the word bank.</p>
+<p><strong>Word bank:</strong> went · had · saw · came · bought</p>
+<p><em>Example:</em> Yesterday I (go) to the market. → Yesterday I
+<strong>went</strong> to the market.</p>
+<ol type="1">
+<li>Last night we (have) dinner with friends. →
+____________________________________</li>
+<li>On Monday she (buy) a new coat. →
+____________________________________</li>
+<li>He (come) home late yesterday. →
+____________________________________</li>
+</ol>
+<h3 id="h-future--going-to-and-will">(h) Future — going to and will</h3>
+<p>Use <strong>going to</strong> for a plan you already decided. Use
+<strong>will</strong> for a decision now, a prediction, or an offer.</p>
+<p><em>Example:</em> (plan) Next week I ______ start a new class. → Next
+week I <strong>am going to</strong> start a new class.</p>
+<ol type="1">
+<li>(plan) Tomorrow she ______ visit her friend. →
+____________________________________</li>
+<li>(prediction) I think it ______ rain later. →
+____________________________________</li>
+<li>(offer) Your bag is heavy. I ______ help you. →
+____________________________________</li>
+</ol>
+<h2 id="reading">Reading</h2>
+<p>Read the text. Then answer the questions in full sentences.</p>
+<blockquote>
+<p>Carlos is from Mexico. He lives in a small flat in the city. There is
+one bedroom and a small kitchen. Every morning he takes the bus to work,
+and he starts at nine o'clock. Last week he had a busy time: he worked
+late on three days and he bought a new jacket for the cold weather. Next
+month he is going to start an English class, because he thinks it will
+help him at work.</p>
+</blockquote>
+<ol type="1">
+<li>Where is Carlos from? → ____________________________________</li>
+<li>How does he go to work every morning? →
+____________________________________</li>
+<li>What did he do last week? (write two things) →
+____________________________________</li>
+<li>What is he going to do next month, and why? →
+____________________________________</li>
+</ol>
+<h2 id="write-about-yourself">Write about yourself</h2>
+<p>Write a short paragraph of about <strong>six sentences</strong> about
+you. Use <strong>present, past, and future</strong> together. Follow the
+frame. Write true sentences about your own life.</p>
+<p><em>Example:</em> My name is Ana. I work in a shop and I start at
+nine o'clock. Right now I am studying English at home. Last week I
+visited my family and we had dinner together. Next month I am going to
+look for a new job. I think it will be a good year for me.</p>
+<p><strong>Frame — write one or two sentences for each
+part:</strong></p>
+<ol type="1">
+<li>Who you are (present simple): My name is ______ . I ______ ...</li>
+<li>Your routine now (present simple / present continuous): Every day I
+______ ... / Right now I am ______ ...</li>
+<li>Something you did last week (past simple): Last week I ______
+...</li>
+<li>Your plans for the future (going to / will): Next month I am going
+to ______ ... / I think it will ______ ...</li>
+</ol>
+<p>Write your paragraph here:</p>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="homework">Homework</h2>
+<ol type="1">
+<li>Rewrite these four sentences as asked:
+<ul>
+<li>She works on Sundays. → make it a <strong>question</strong> (Does
+...?): ____________________________________</li>
+<li>There is a shop near here. → make it <strong>plural</strong> (two
+shops): ____________________________________</li>
+<li>I work late every day. → put it in the <strong>past</strong>
+(yesterday): ____________________________________</li>
+<li>We visited my family. → put it in the <strong>future</strong> (next
+week, going to): ____________________________________</li>
+</ul></li>
+<li>Write a second short paragraph (about <strong>six
+sentences</strong>) about a family member or a friend: who they are,
+their routine now, something they did last week, and a plan for the
+future. Use present, past, and future, like the paragraph you wrote in
+class. Bring your written work to the next lesson.</li>
+</ol>
+
+<div class="nav-footer"><a href="teacher-plan.html">← Lesson 18 — Stage 1 Review · Teacher</a><span></span></div>
+</div></div>
+</div>
+</body>
+</html>

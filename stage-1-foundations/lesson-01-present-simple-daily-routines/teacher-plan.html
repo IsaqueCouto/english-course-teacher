@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1 — Present Simple: Daily Routines — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="" href="../../ielts/ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="../../ielts/accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t active" href="teacher-plan.html">Teacher plan</a>
+<a class="s" href="student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+<div class="badge teacher">👨‍🏫 For the teacher</div>
+<h1 id="lesson-1--present-simple-daily-routines">Lesson 1 — Present
+Simple: Daily Routines</h1>
+<h2 id="how-to-teach-this">How to teach this</h2>
+<p>This is the first lesson of the course. The student already knows the
+basics (greetings, numbers, "to be", everyday objects, family) and reads
+and writes simple sentences well (high A1). Present simple for daily
+routines is a natural next step: it lets him describe his real life in
+writing.</p>
+<p>Keep the lesson gentle and scaffolded. The student does NOT speak in
+this lesson — every student task is reading, listening, recognition, or
+WRITING. You do all the talking and explaining; speaking is coached
+separately. When you want him to produce something, he writes it.</p>
+<p>Use light Portuguese support: give a short PT gloss when you
+introduce a new grammar rule or a new instruction, but do not translate
+every word. He understands more than he can produce, so let him work it
+out in English first and only confirm in Portuguese.</p>
+<p>Dictation is allowed: you say a short full sentence, he writes it.
+Never ask him to say, repeat, or read anything aloud.</p>
+<h2 id="objective">Objective</h2>
+<p>By the end, the student can WRITE present-simple sentences
+(affirmative and negative) about daily routines, with correct word
+order, time expressions, and basic frequency adverbs, using
+I/you/we/they.</p>
+<h2 id="target-language">Target language</h2>
+<ul>
+<li>Routine verbs (~12): wake up, get up, have breakfast, have lunch,
+have dinner, go to work, start work, finish work, come home, study,
+watch TV, go to bed</li>
+<li>Time expressions: at 7:00, in the morning, in the afternoon, in the
+evening, at night, every day</li>
+<li>Frequency adverbs: always, usually, sometimes, never — placed BEFORE
+the verb (I always wake up early.)</li>
+<li>Negative: don't + verb (I don't work on Sunday.)</li>
+<li>Subjects: I / you / we / they only. (he / she / it comes in Lesson
+2.)</li>
+</ul>
+<h2 id="flow-with-timings-4550-min">Flow with timings (~45–50 min)</h2>
+<h3 id="warm-up-5-min">Warm-up (~5 min)</h3>
+<ul>
+<li>Greet the student and settle in. On the board or paper, write three
+short sentences about YOUR day: "I wake up at 6:00. I have breakfast in
+the morning. I go to bed at night."</li>
+<li>Underline the time expressions. Ask the student (in writing) to copy
+the three sentences and underline the time words himself. PT: "Sublinhe
+as horas e os momentos do dia." This warms him up and previews the
+pattern with no pressure.</li>
+</ul>
+<h3 id="present-12-min">Present (~12 min)</h3>
+<ul>
+<li>Present the 12 routine verbs in a simple list. Mime or point to a
+clock/picture to make meaning clear — do not ask him to repeat. Give a
+one-word PT gloss only where needed (wake up = acordar, get up =
+levantar-se, have lunch = almoçar, go to bed = ir para a cama).</li>
+<li>Teach the core rule on the board: <strong>Subject + verb +
+(time).</strong> "I work at night." Explain in English, then a short PT
+gloss: "Com I/you/we/they o verbo não muda."</li>
+<li>Teach the negative: <strong>don't + verb.</strong> "I don't work at
+night." PT: "don't = não (forma negativa)."</li>
+<li>Teach frequency adverbs and their position: always / usually /
+sometimes / never come BEFORE the main verb. Write: "I usually get up at
+7:00." / "I never work on Sunday." PT: "always, usually, sometimes,
+never vêm ANTES do verbo."</li>
+<li>Dictation check (writing): say 3 short sentences slowly, student
+writes them — "I get up at 7:00." / "We have lunch at noon." / "They
+don't watch TV." Then show him the correct versions so he can
+self-check.</li>
+</ul>
+<h3 id="practice-18-min">Practice (~18 min)</h3>
+<ul>
+<li>Student works through the student-sheet exercises (a)–(e) in
+writing. Each exercise begins with a solved example and includes a word
+bank or hints.</li>
+<li>Circulate and point silently at anything to reconsider; let him fix
+it in writing. Confirm a tricky point in PT if he is stuck, then return
+to English.</li>
+<li>Watch especially for word order with frequency adverbs and for
+forgetting "don't" in negatives.</li>
+</ul>
+<h3 id="produce--student-writes-45-sentences-8-min">Produce — student
+WRITES ~4–5 sentences (~8 min)</h3>
+<ul>
+<li>Direct the student to exercise (f) "Write your own routine." He
+writes 4–5 sentences about a typical day using the given sentence
+starters/frame. No speaking — this is written production.</li>
+<li>Give him the frame and let him fill it in. If he finishes early, ask
+him to add one negative sentence with "don't."</li>
+</ul>
+<h3 id="wrap-up-5-min">Wrap-up (~5 min)</h3>
+<ul>
+<li>Collect his "write your own routine" paragraph and read it back
+silently to yourself; mark only clear errors gently.</li>
+<li>Recap the three rules on the board: (1) I/you/we/they + verb, (2)
+don't + verb for negative, (3) frequency adverb before the verb. Confirm
+each with a short PT gloss.</li>
+<li>Assign homework.</li>
+</ul>
+<h2 id="common-mistakes--gentle-corrections">Common mistakes &amp;
+gentle corrections</h2>
+<ul>
+<li><strong>Adding -s with I/you/we/they</strong> ("I works"). The -s
+form is Lesson 2. Gently: "With I, the verb stays plain — I work." PT:
+"Com I, o verbo fica simples."</li>
+<li><strong>Wrong frequency-adverb position</strong> ("I get up always
+early"). Show the correct order: "I always get up early." PT: "O
+advérbio vem antes do verbo."</li>
+<li><strong>Forgetting don't in negatives</strong> ("I no work" / "I not
+work"). Show: "I don't work." PT: "Use don't para o negativo."</li>
+<li><strong>Wrong preposition with time</strong> ("in 7:00" / "at the
+morning"). Remind: at + clock time, in + morning/afternoon/evening, at
+night. PT: "at para horas, in para parte do dia, at night."</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<p>Mirrors the student sheet:</p>
+<ol type="1">
+<li>Finish any Practice items not completed in class.</li>
+<li>Write a short paragraph (4–5 sentences) about a family member's
+typical day using I/you/we/they style sentences (use "they" for the
+family member's activities, e.g. "They get up at 8:00.").</li>
+<li>Write 3 negative sentences with "don't" about things he does NOT do
+on weekends.</li>
+</ol>
+
+<div class="nav-footer"><a href="../../ielts/accent-listening.html">← Accent Listening — Ear Training (for the teacher)</a><a href="student-sheet.html">Lesson 01 — Present Simple Daily Routines →</a></div>
+</div></div>
+</div>
+</body>
+</html>

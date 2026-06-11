@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IELTS General Training — Overview (for the teacher) — English Course — Teacher</title>
+<style>
+:root{--accent:#1f6feb;--teacher:#0f8a5f;--student:#b1560f;--bg:#fbfbfa;--ink:#1f2328;--muted:#656d76;--line:#e3e6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:300px;flex:0 0 300px;background:#fff;border-right:1px solid var(--line);padding:22px 18px;overflow-y:auto;height:100vh;position:sticky;top:0;}
+.sidebar h1{font-size:17px;margin:0 0 4px;}
+.sidebar .tag{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.sidebar .group{margin:0 0 16px;}
+.sidebar .group > .gt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 6px;}
+.sidebar a{display:block;text-decoration:none;color:var(--ink);padding:5px 9px;border-radius:7px;font-size:14px;}
+.sidebar a:hover{background:#f0f3f6;}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600;}
+.sidebar .lesson{margin:7px 0;}
+.sidebar .lesson .ll{font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);}
+.sidebar .lesson a{font-size:13px;padding:3px 9px 3px 18px;color:var(--muted);}
+.sidebar .lesson a.t::before{content:"\1F468\200D\1F3EB  ";}
+.sidebar .lesson a.s::before{content:"\1F4DD  ";}
+.content{flex:1;display:flex;justify-content:center;padding:42px 40px 90px;}
+.page{width:100%;max-width:840px;}
+.badge{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+.badge.teacher{background:#e6f4ee;color:var(--teacher);}
+.badge.student{background:#fdf0e6;color:var(--student);}
+.content h1{font-size:30px;line-height:1.25;margin:.1em 0 .5em;}
+.content h2{font-size:22px;margin:1.5em 0 .5em;padding-bottom:.2em;border-bottom:1px solid var(--line);}
+.content h3{font-size:18px;margin:1.3em 0 .4em;}
+.content p,.content li{font-size:16px;}
+.content a{color:var(--accent);}
+.content table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;}
+.content th,.content td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.content th{background:#f3f5f7;}
+.content tr:nth-child(even) td{background:#fafbfc;}
+.content blockquote{margin:1em 0;padding:10px 16px;background:#fff;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;color:#30363d;}
+.content code{background:#f0f3f6;padding:1px 5px;border-radius:4px;font-size:14px;}
+.content pre{background:#0d1117;color:#e6edf3;padding:14px 16px;border-radius:10px;overflow-x:auto;line-height:1.7;letter-spacing:.05em;}
+.content pre code{background:none;color:inherit;padding:0;}
+.content ul.task-list{list-style:none;padding-left:1.2em;}
+.content hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+.nav-footer{display:flex;justify-content:space-between;gap:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:20px;}
+.nav-footer a{display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;font-size:15px;}
+/* Student site: a touch larger and roomier for an absolute beginner. */
+body.big .content h1{font-size:34px;}
+body.big .content p,body.big .content li,body.big .content td{font-size:18px;}
+body.big .content{line-height:1.8;}
+/* Mobile top bar + collapsible menu (CSS-only checkbox toggle, works offline). */
+.nav-toggle{display:none;}
+.topbar{display:none;}
+@media (max-width:860px){
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:11px 14px;}
+  .hamburger{font-size:20px;line-height:1;cursor:pointer;padding:7px 13px;border:1px solid var(--line);border-radius:9px;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .hamburger:active{background:#f0f3f6;}
+  .topbar-title{font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .layout{flex-direction:column;}
+  .sidebar{display:none;width:100%;flex:none;height:auto;position:static;border-right:none;border-bottom:1px solid var(--line);padding:10px 14px 18px;}
+  #nav-toggle:checked ~ .layout .sidebar{display:block;}
+  .sidebar a{padding:11px 12px;font-size:16px;}
+  .sidebar .lesson a{padding:9px 12px 9px 22px;font-size:15px;}
+  .content{padding:22px 16px 64px;}
+  .content h1{font-size:26px;}
+  body.big .content h1{font-size:28px;}
+  .content h2{font-size:20px;}
+  .content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-footer{flex-direction:column;gap:14px;}
+}
+@media print{
+  .sidebar,.nav-footer,.topbar{display:none!important;}
+  .content{padding:0;}
+  body{background:#fff;}
+  .content pre{background:#f3f5f7;color:#111;}
+}
+</style>
+</head>
+<body class="">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<header class="topbar"><label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label><span class="topbar-title">English Course — Teacher</span></header>
+<div class="layout">
+<div class="sidebar">
+<h1>English Course — Teacher</h1>
+<p class="tag">Beginner → English for Work + IELTS</p>
+<div class="group"><a href="../index.html" class="home">🏠 Home</a></div>
+<div class="group">
+<div class="gt">Start Here</div>
+<a class="" href="../00-start-here/teaching-basics.html">Teaching Basics: Your Crash Course</a>
+<a class="" href="../00-start-here/placement-check.html">Placement Check</a>
+<a class="" href="../00-start-here/curriculum-map.html">Curriculum Map</a>
+<a class="" href="../00-start-here/progress-tracker.html">Progress Tracker / Meu Progresso</a>
+</div>
+<div class="group">
+<div class="gt">IELTS</div>
+<a class="active" href="ielts-overview.html">IELTS General Training — Overview (for the teacher)</a>
+<a class="" href="accent-listening.html">Accent Listening — Ear Training (for the teacher)</a>
+</div>
+<div class="group">
+<div class="gt">Stage 1 — Foundations</div>
+<div class="lesson">
+<div class="ll">Lesson 01 — Present Simple Daily Routines</div>
+<a class="t" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-01-present-simple-daily-routines/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 02 — He She It And The S Ending</div>
+<a class="t" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-02-he-she-it-and-the-s-ending/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 03 — Questions</div>
+<a class="t" href="../stage-1-foundations/lesson-03-questions/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-03-questions/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 04 — There Is There Are</div>
+<a class="t" href="../stage-1-foundations/lesson-04-there-is-there-are/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-04-there-is-there-are/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 05 — Listening For Key Words</div>
+<a class="t" href="../stage-1-foundations/lesson-05-listening-for-key-words/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-05-listening-for-key-words/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 06 — Present Continuous</div>
+<a class="t" href="../stage-1-foundations/lesson-06-present-continuous/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-06-present-continuous/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 07 — Housing And Rooms</div>
+<a class="t" href="../stage-1-foundations/lesson-07-housing-and-rooms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-07-housing-and-rooms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 08 — Reading Signs And Notices</div>
+<a class="t" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-08-reading-signs-and-notices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 09 — Past Simple Regular</div>
+<a class="t" href="../stage-1-foundations/lesson-09-past-simple-regular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-09-past-simple-regular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 10 — Past Simple Irregular</div>
+<a class="t" href="../stage-1-foundations/lesson-10-past-simple-irregular/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-10-past-simple-irregular/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 11 — Getting Around</div>
+<a class="t" href="../stage-1-foundations/lesson-11-getting-around/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-11-getting-around/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 12 — Shopping And Prices</div>
+<a class="t" href="../stage-1-foundations/lesson-12-shopping-and-prices/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-12-shopping-and-prices/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 13 — Future Going To And Will</div>
+<a class="t" href="../stage-1-foundations/lesson-13-future-going-to-and-will/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-13-future-going-to-and-will/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 14 — Describing People And Places</div>
+<a class="t" href="../stage-1-foundations/lesson-14-describing-people-and-places/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-14-describing-people-and-places/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 15 — Workplace Small Talk</div>
+<a class="t" href="../stage-1-foundations/lesson-15-workplace-small-talk/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-15-workplace-small-talk/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 16 — Filling In Forms</div>
+<a class="t" href="../stage-1-foundations/lesson-16-filling-in-forms/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-16-filling-in-forms/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 17 — Messages And Notes</div>
+<a class="t" href="../stage-1-foundations/lesson-17-messages-and-notes/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-17-messages-and-notes/student-sheet.html">Student sheet</a>
+</div>
+<div class="lesson">
+<div class="ll">Lesson 18 — Stage 1 Review</div>
+<a class="t" href="../stage-1-foundations/lesson-18-stage-1-review/teacher-plan.html">Teacher plan</a>
+<a class="s" href="../stage-1-foundations/lesson-18-stage-1-review/student-sheet.html">Student sheet</a>
+</div>
+</div>
+</div>
+<div class="content"><div class="page">
+
+<h1 id="ielts-general-training--overview-for-the-teacher">IELTS General
+Training — Overview (for the teacher)</h1>
+<p>This is a reference for you, the teacher. The student does
+<strong>not</strong> need to read all of this now. In this course the
+student meets IELTS gradually (see the last section). Use this page to
+understand the test you are preparing them for.</p>
+<hr />
+<h2 id="1-what-is-ielts">1. What is IELTS?</h2>
+<p><strong>IELTS</strong> (International English Language Testing
+System) is the world's most widely used English test for migration,
+work, and study. It is co-owned by the British Council, IDP: IELTS
+Australia, and Cambridge English. It measures English across four skills
+— Listening, Reading, Writing, and Speaking — and reports results on a
+<strong>9-band scale</strong> (see Section 4).</p>
+<p>There is no "pass" or "fail." You receive a band score, and the
+organisation you apply to (an employer, a province, or the federal
+immigration authority) decides what band they require.</p>
+<hr />
+<h2 id="2-general-training-vs-academic">2. General Training vs
+Academic</h2>
+<p>IELTS comes in <strong>two versions</strong>. The Listening and
+Speaking sections are <strong>identical</strong> in both. Only the
+<strong>Reading</strong> and <strong>Writing</strong> sections
+differ.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th><strong>General Training</strong></th>
+<th><strong>Academic</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Work, migration, secondary school, training programs</td>
+<td>University/college study, professional registration (e.g. doctors,
+nurses)</td>
+</tr>
+<tr>
+<td>Listening</td>
+<td>Same as Academic</td>
+<td>Same as GT</td>
+</tr>
+<tr>
+<td>Speaking</td>
+<td>Same as Academic</td>
+<td>Same as GT</td>
+</tr>
+<tr>
+<td>Reading</td>
+<td>Everyday texts: notices, ads, timetables, workplace documents, one
+longer general-interest passage</td>
+<td>Three long academic articles (journals, textbooks)</td>
+</tr>
+<tr>
+<td>Writing Task 1</td>
+<td>Write a <strong>letter</strong> (~150 words)</td>
+<td>Describe a chart/graph/diagram (~150 words)</td>
+</tr>
+<tr>
+<td>Writing Task 2</td>
+<td>Essay (~250 words)</td>
+<td>Essay (~250 words) — more academic register</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-general-training-is-the-right-choice-here">Why General
+Training is the right choice here</h3>
+<p>This student needs IELTS <strong>for work/immigration</strong>, not
+to study at a university. For most work and skilled-immigration
+programs:</p>
+<ul>
+<li>Most <strong>work and skilled-immigration programs</strong> accept
+<strong>IELTS General Training</strong>.</li>
+<li><strong>IELTS Academic</strong> is only needed for university study
+or for certain regulated professions that demand it.</li>
+</ul>
+<p>General Training is also generally <strong>more approachable for a
+beginner</strong>: the Reading texts are everyday materials (signs,
+emails, instructions) rather than dense academic articles, and the
+Writing Task 1 is a practical letter rather than data description.</p>
+<blockquote>
+<p><strong>Important:</strong> For work/immigration purposes the student
+should take <strong>IELTS General Training</strong>, <em>not</em> the
+IELTS Life Skills test or "IELTS for UKVI" unless a specific program
+says otherwise. Confirm the exact test name the chosen program demands
+before booking.</p>
+</blockquote>
+<hr />
+<h2 id="3-the-four-sections">3. The four sections</h2>
+<p>Total test time is about <strong>2 hours 45 minutes</strong> for
+Listening + Reading + Writing (done in one sitting, no breaks). Speaking
+may be on the same day or up to <strong>7 days before or
+after</strong>.</p>
+<h3 id="listening-30-minutes--transfer-time-on-paper">Listening (~30
+minutes + transfer time on paper)</h3>
+<ul>
+<li><strong>4 recordings</strong>, played <strong>once
+only</strong>.</li>
+<li><strong>40 questions</strong> total.</li>
+<li>The recordings move from everyday to more formal/academic in feel:
+<ol type="1">
+<li>A conversation between two people in an everyday social
+context.</li>
+<li>A monologue in an everyday social context (e.g. a speech about local
+facilities).</li>
+<li>A conversation among up to four people in a training/education
+context.</li>
+<li>A monologue on an academic subject.</li>
+</ol></li>
+<li>Uses a <strong>range of native-speaker accents</strong> — British,
+Australian, New Zealand, American.</li>
+<li>On <strong>paper</strong>, candidates get <strong>10 extra
+minutes</strong> at the end to transfer answers to the answer sheet. On
+<strong>computer</strong>, there is no separate transfer time (about 2
+minutes to review).</li>
+<li>Same for both GT and Academic.</li>
+</ul>
+<h3 id="reading-60-minutes">Reading (60 minutes)</h3>
+<ul>
+<li><strong>40 questions</strong>, no extra transfer time (answers
+written/typed as you go).</li>
+<li>The <strong>General Training Reading</strong> uses real-world,
+everyday materials and gets progressively longer/harder:
+<ol type="1">
+<li><strong>Section 1 — "social survival":</strong> short everyday texts
+such as notices, advertisements, timetables.</li>
+<li><strong>Section 2 — "workplace survival":</strong> work-related
+texts such as job descriptions, contracts, staff handbooks, training
+materials.</li>
+<li><strong>Section 3 — "general reading":</strong> one longer, more
+complex piece of continuous prose on a general-interest topic.</li>
+</ol></li>
+<li>This is <strong>easier than Academic Reading</strong>, which uses
+three dense academic passages. Good news for a beginner — but the time
+pressure (40 questions in 60 minutes) is real and must be trained.</li>
+</ul>
+<h3 id="writing-60-minutes">Writing (60 minutes)</h3>
+<p>Two tasks. Task 2 is worth <strong>more</strong> of the Writing
+score, so manage time accordingly (suggest ~20 min on Task 1, ~40 min on
+Task 2).</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>What it is</th>
+<th>Length</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task 1</strong></td>
+<td>Write a <strong>letter</strong> in response to a situation</td>
+<td><strong>~150 words</strong></td>
+<td>Can be <strong>formal</strong>, <strong>semi-formal</strong>, or
+<strong>informal</strong> depending on the prompt (e.g. a complaint to a
+company = formal; a note to a friend = informal). Register matters.</td>
+</tr>
+<tr>
+<td><strong>Task 2</strong></td>
+<td>Write an <strong>essay</strong> responding to a point of view,
+argument, or problem</td>
+<td><strong>~250 words</strong></td>
+<td>More general/personal topics than Academic. Clear structure,
+examples, opinion.</td>
+</tr>
+</tbody>
+</table>
+<p>Writing below the word count is penalised, so the student must learn
+to hit the minimums.</p>
+<h3 id="speaking-1114-minutes">Speaking (11–14 minutes)</h3>
+<ul>
+<li>A <strong>face-to-face</strong> (or video call) interview with a
+<strong>real examiner</strong> — not a computer.</li>
+<li>Recorded for quality/monitoring. Three parts:
+<ol type="1">
+<li><strong>Part 1 — Introduction &amp; interview (4–5 min):</strong>
+identity check, then everyday questions about home, work, family,
+interests.</li>
+<li><strong>Part 2 — Long turn (3–4 min):</strong> the candidate gets a
+task card, <strong>1 minute</strong> to prepare, then speaks for
+<strong>1–2 minutes</strong> on the topic, followed by a couple of
+rounded-off questions.</li>
+<li><strong>Part 3 — Discussion (4–5 min):</strong> a two-way discussion
+of more abstract ideas connected to the Part 2 topic.</li>
+</ol></li>
+<li>Same for both GT and Academic.</li>
+</ul>
+<hr />
+<h2 id="4-the-9-band-scale">4. The 9-band scale</h2>
+<p>Each of the four sections gets a band from <strong>1 to 9</strong>
+(including half-bands like 6.5). The four are averaged into an
+<strong>Overall Band Score</strong> (rounded to the nearest half
+band).</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Label</th>
+<th>Rough meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>Expert</td>
+<td>Fully operational command; native-like.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Very good</td>
+<td>Fully operational with occasional slips.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Good</td>
+<td>Operational command; handles complex language.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Competent</td>
+<td>Generally effective despite some errors.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Modest</td>
+<td>Partial command; copes with overall meaning.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Limited</td>
+<td>Basic competence in familiar situations only.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Extremely limited</td>
+<td>Conveys/understands only general meaning.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Intermittent</td>
+<td>Very limited; great difficulty.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Non-user</td>
+<td>No real ability.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Did not attempt</td>
+<td>No assessable information.</td>
+</tr>
+</tbody>
+</table>
+<p>An <strong>absolute beginner</strong> today would test around Band
+1–3. Reaching Band 5–7 by late 2026 is the kind of climb this course is
+built around.</p>
+<h3 id="choosing-a-target-band">Choosing a target band</h3>
+<p>The 9-band scale above is what matters for planning. A realistic
+climb for this course is into the <strong>Band 5–7</strong> range by
+late 2026.</p>
+<blockquote>
+<p><strong>Confirm before targeting a score:</strong> the <strong>exact
+band the student needs depends on their specific work or immigration
+program</strong> — different programs and job requirements set different
+minimum scores. Check the program's stated English requirement before
+locking a goal score.</p>
+</blockquote>
+<hr />
+<h2 id="5-test-day-logistics-high-level">5. Test-day logistics (high
+level)</h2>
+<ul>
+<li><strong>ID:</strong> The student must bring the <strong>same valid
+passport</strong> they used to register. No passport on the day = no
+test. (Photo is taken at the centre.)</li>
+<li><strong>Paper vs computer-delivered:</strong> IELTS is offered in
+two delivery formats — <strong>paper-based</strong> and
+<strong>computer-delivered</strong>. The <strong>content, format,
+scoring, and difficulty are identical</strong>; only the input method
+differs.
+<ul>
+<li><em>Computer-delivered:</em> type Writing, click answers; results
+usually in <strong>3–5 days</strong>; far more test dates
+available.</li>
+<li><em>Paper-based:</em> handwrite everything; results in about
+<strong>13 days</strong>.</li>
+<li>Speaking is the <strong>same</strong> for both (live examiner).</li>
+</ul></li>
+<li><strong>Results:</strong> A <strong>Test Report Form (TRF)</strong>
+shows the four section bands plus the overall band. Scores are valid for
+<strong>2 years</strong>.</li>
+<li>Decide format with the student later — for a beginner,
+computer-delivered often suits if their typing is reasonable and they
+want faster results; paper suits those more comfortable writing by
+hand.</li>
+</ul>
+<hr />
+<h2 id="6-how-ielts-fits-into-this-course">6. How IELTS fits into THIS
+course</h2>
+<ul>
+<li><strong>Stage 1 is light familiarization only.</strong> At this
+stage the student is an absolute beginner; the focus is foundational
+English (sounds, basic vocabulary, simple sentences, everyday survival
+language). IELTS is mentioned only so the goal feels real — <strong>no
+real test practice yet</strong>.</li>
+<li><strong>Real IELTS practice begins in Stage 2–3</strong>, once the
+student has enough English to attempt simplified versions of the task
+types and gradually build up to full timed sections.</li>
+<li><strong>Speaking is coached live by the teacher.</strong> Because
+IELTS Speaking is a live interview with a real examiner, the student
+rehearses it directly with you — mock Part 1/2/3 interviews, feedback on
+fluency, pronunciation, and answer structure — rather than through any
+automated tool.</li>
+</ul>
+<p>Keep this document for your own reference and reveal pieces of it to
+the student as they become ready.</p>
+
+<div class="nav-footer"><a href="../00-start-here/progress-tracker.html">← Progress Tracker / Meu Progresso</a><a href="accent-listening.html">Accent Listening — Ear Training (for the teacher) →</a></div>
+</div></div>
+</div>
+</body>
+</html>
